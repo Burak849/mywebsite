@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\components",
+    "\\src\\app\\fonts",
+    "\\src\\app\\pages",
+    "\\src\\app\\styles",
+    "\\src\\services"
+  ],
+  "SelectedNode": "\\src\\app\\styles\\global.css",
+  "PreviewInSolutionExplorer": false
+}
