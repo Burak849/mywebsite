@@ -1,46 +1,61 @@
 import React from 'react';
+import styles from '../styles/Navbar.module.css'; // CSS module importu
+
 
 const Navbar = () => {
     return (
-        <nav className="max-lg:hidden flex-row flex justify-center items-center gap-24 font-semibold p-5 top-0 sticky top-10 z-50 ml-auto mr-auto w-max px-16 py-5 transition-all ease-in-out duration-100 rounded-full border border-white border-opacity-40 bg-opacity-70 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] bg-white">
-            <a className="relative" href="#home">
-                <span>
-                    <span className="text-[--orange] absolute -left-5 top-0 max-lg:hidden">&lt;</span>
-                    <div>
-                        <span className="text-[--orange] absolute -left-5 top-0">&lt;</span>Home
-                    </div>
-                    <span className="text-[--orange] absolute top-0 -right-10 max-lg:hidden">/&gt;</span>
-                </span>
+        <nav className={styles.navbar}>
+            <a className={`${styles.link} ${styles['home-link']}`} href="#home">
+                <span className={`${styles['left-angle']}`}>&lt;</span>
+                <div>
+                    <span className={`${styles['left-angle']}`}>&lt;</span>Home
+                </div>
+                <span className={`${styles['right-angle']}`}>/&gt;</span>
             </a>
-            <a className="relative opacity-20" href="#skills">
-                <span>
-                    <div>Skills</div>
-                </span>
+            <a className={styles.link} href="#about-me">
+                <span className={`${styles['left-angle']}`}>&lt;</span>
+                <div>
+                    <span className={`${styles['left-angle']}`}>&lt;</span>About Me
+                </div>
+                <span className={`${styles['right-angle']}`}>/&gt;</span>
             </a>
-            <a className="relative opacity-20" href="#projects">
-                <span>
-                    <div>Projects</div>
-                </span>
+            <a className={styles.link} href="#skills">
+                <span className={`${styles['left-angle']}`}>&lt;</span>
+                <div>
+                    <span className={`${styles['left-angle']}`}>&lt;</span>Skills
+                </div>
+                <span className={`${styles['right-angle']}`}>/&gt;</span>
             </a>
-            <a className="relative opacity-20" href="#about-me">
-                <span>
-                    <div>About me</div>
-                </span>
+            <a className={styles.link} href="#projects">
+                <span className={`${styles['left-angle']}`}>&lt;</span>
+                <div>
+                    <span className={`${styles['left-angle']}`}>&lt;</span>Projects
+                </div>
+                <span className={`${styles['right-angle']}`}>/&gt;</span>
             </a>
-            <a className="relative opacity-20" href="#contact">
-                <span>
-                    <div>Contact</div>
-                </span>
+            <a className={styles.link} href="#resume">
+                <span className={`${styles['left-angle']}`}>&lt;</span>
+                <div>
+                    <span className={`${styles['left-angle']}`}>&lt;</span>Resume
+                </div>
+                <span className={`${styles['right-angle']}`}>/&gt;</span>
             </a>
-            <div className="language-switch-container">
-                <input className="tgl tgl-style" id="toggle-language" type="checkbox" />
-                <label
-                    className="tgl-btn"
-                    htmlFor="toggle-language"
-                    data-tg-off="DE"
-                    data-tg-on="EN"
-                ></label>
-            </div>
+            <a className={styles.link} href="#contact">
+                <span className={`${styles['left-angle']}`}>&lt;</span>
+                <div>
+                    <span className={`${styles['left-angle']}`}>&lt;</span>Contact
+                </div>
+                <span className={`${styles['right-angle']}`}>/&gt;</span>
+            </a>
+            {/*<div className="language-switch-container">*/}
+            {/*    <input className="tgl tgl-style" id="toggle-language" type="checkbox" />*/}
+            {/*    <label*/}
+            {/*        className="tgl-btn"*/}
+            {/*        htmlFor="toggle-language"*/}
+            {/*        data-tg-off="DE"*/}
+            {/*        data-tg-on="EN"*/}
+            {/*    ></label>*/}
+            {/*</div>*/}
         </nav>
     );
 };
