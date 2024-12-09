@@ -1,0 +1,17 @@
+.profile-image {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0 solid #fff;
+    box-shadow: 0px 0px 80px black;
+}
+.paragraf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    gap: 5%;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+}

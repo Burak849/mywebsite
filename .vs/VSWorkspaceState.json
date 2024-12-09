@@ -1,14 +1,15 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\api",
     "\\src\\app\\components",
-    "\\src\\app\\fonts",
     "\\src\\app\\pages",
     "\\src\\app\\styles",
     "\\src\\services"
   ],
-  "SelectedNode": "\\src\\app\\styles\\global.css",
+  "SelectedNode": "\\src\\app\\styles\\About.module.css",
   "PreviewInSolutionExplorer": false
 }
