@@ -1,3 +1,15 @@
 .skill {
-    background-color: #A3CCAB;
+    background-color: transparent;
+}
+.card1, .card2, .card3, .card4{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    box-shadow: 0px 0px 80px black;
+    height:auto;
+    width: 20%;
+    color:black;
+    border-radius: 20px;
 }

@@ -5,7 +5,7 @@ module.exports = {
         extend: {
             colors: {
                 '--orange': '#FF5733', 
-                'custom-baslik': '#390D02',
+                'custom-baslik': '#000000',
             },
         },
     },

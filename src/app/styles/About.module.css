@@ -1,17 +1,74 @@
 .profile-image {
-    width: 30%;
+    width: 25%;
     height: auto;
     object-fit: cover;
     border-radius: 50%;
     border: 0 solid #fff;
+    position: relative;
+    z-index:10;
     box-shadow: 0px 0px 80px black;
+    z-index:1;
 }
 .paragraf {
     display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    flex-wrap: nowrap;
+}
+
+
+.text-container {
+    display: flex;
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
-    padding: 2%;
-    gap: 5%;
-    flex-wrap: nowrap;
-    flex-direction: row-reverse;
+    position: relative; 
+    z-index: 2;
 }
+
+.image-container {
+    position: relative; 
+    z-index: 1; 
+}
+
+.Typewriter {
+    position:relative;
+    z-index:1;
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.Typewriter__wrapper {
+    width: 200px;
+    max-width: 100%;
+    overflow: hidden;
+    font-size: 24px;
+    animation: typing 4s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
+}
+
+.Typewriter__cursor {
+    display: inline-block;
+    width: 10px;
+    background-color: black;
+    animation: blink 0.75s step-end infinite;
+    font-size: 24px;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        background-color: transparent;
+    }
+}
+
