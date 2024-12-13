@@ -9,8 +9,9 @@ import Footer from "./components/Footer";
 import SkillSection from "./pages/skills";
 
 export default function Home() {
-    const cursorRef = useRef<HTMLDivElement>(null);
 
+    const cursorRef = useRef<HTMLDivElement>(null);
+    const trailRef = useRef<HTMLDivElement[]>([]);
     const trailLength = 10;
     const [positions, setPositions] = useState<{ x: number; y: number }[]>(
         Array(trailLength).fill({ x: 10, y: 10 })
@@ -20,7 +21,7 @@ export default function Home() {
         const handleMouseMove = (event: MouseEvent) => {
             const { clientX: x, clientY: y } = event;
             setPositions((prevPositions) => {
-                const newPositions = [{ x, y }, ...prevPositions.slice(0, trailLength - 1)];
+                const newPositions = [{ x, y }, ...prevPositions.slice(0, trailLength - 5)];
                 return newPositions;
             });
 
@@ -45,6 +46,21 @@ export default function Home() {
         };
     }, []);
 
+    const handleHover = (index: number) => {
+        const trailElement = trailRef.current[index];
+        if (trailElement) {
+            trailElement.style.stroke = "#ffffff"; 
+            trailElement.style.strokeWidth = "12"; 
+        }
+    };
+
+    const handleMouseOut = (index: number) => {
+        const trailElement = trailRef.current[index];
+        if (trailElement) {
+            trailElement.style.stroke = "#ffea00"; 
+            trailElement.style.strokeWidth = "10"; 
+        }
+    };
     return (
         <>
             <Navbar />
@@ -54,9 +70,6 @@ export default function Home() {
             <ProjectSection />
             <Footer />
 
-           
-
-            {/* Kuyruğu çizgi şeklinde render etme */}
             <svg
                 style={{
                     position: "fixed",
@@ -66,6 +79,7 @@ export default function Home() {
                     zIndex: -1,
                     width: "100%",  
                     height: "100%",
+
                 }}
             >
                 {positions.slice(1).map((pos, index) => (
@@ -77,8 +91,13 @@ export default function Home() {
                         y2={pos.y}
                         stroke="#ffea00"
                         strokeWidth="10"
-                        strokeOpacity={0.6 - index * 0.01} 
+                        strokeOpacity={1} 
                         strokeLinecap="round"  
+                        onMouseEnter={() => handleHover(index)} 
+                        onMouseLeave={() => handleMouseOut(index)} 
+                        style={{
+                            filter: "drop-shadow(0px 0px 1px white)",
+                        }}
                     />
                 ))}
             </svg>
