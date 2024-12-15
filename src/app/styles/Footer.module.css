@@ -1,3 +1,6 @@
 .foot {
     background-color: #000B0D;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
