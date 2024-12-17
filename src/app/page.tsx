@@ -96,7 +96,7 @@ export default function Home() {
                         y1={positions[index].y}
                         x2={pos.x}
                         y2={pos.y}
-                        stroke="#ffea00"
+                        stroke="cyan"
                         strokeWidth="10"
                         strokeOpacity={1} 
                         strokeLinecap="round"  
