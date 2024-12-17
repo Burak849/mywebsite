@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\styles\\Navbar.module.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\styles\\Navbar.module.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\components\\Tooltip.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\Tooltip.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\pages\\about.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\about.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\styles\\Footer.module.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\styles\\Footer.module.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\styles\\About.module.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\styles\\About.module.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\globals.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\globals.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\pages\\projects.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\pages\\projects.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\styles\\Project.module.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\styles\\Project.module.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +35,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Navbar.module.css",
-              "DocumentMoniker": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\styles\\Navbar.module.css",
-              "RelativeDocumentMoniker": "src\\app\\styles\\Navbar.module.css",
-              "ToolTip": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\styles\\Navbar.module.css",
-              "RelativeToolTip": "src\\app\\styles\\Navbar.module.css",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-15T04:51:16.145Z",
+              "Title": "Tooltip.tsx",
+              "DocumentMoniker": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\components\\Tooltip.tsx",
+              "RelativeDocumentMoniker": "src\\app\\components\\Tooltip.tsx",
+              "ToolTip": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\components\\Tooltip.tsx",
+              "RelativeToolTip": "src\\app\\components\\Tooltip.tsx",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAYwLoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-12-17T04:48:07.211Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "About.module.css",
-              "DocumentMoniker": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\styles\\About.module.css",
-              "RelativeDocumentMoniker": "src\\app\\styles\\About.module.css",
-              "ToolTip": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\styles\\About.module.css",
-              "RelativeToolTip": "src\\app\\styles\\About.module.css",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAEIAAAAQAAAAAAAAAA==",
+              "Title": "globals.css",
+              "DocumentMoniker": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\globals.css",
+              "RelativeDocumentMoniker": "src\\app\\globals.css",
+              "ToolTip": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\globals.css",
+              "RelativeToolTip": "src\\app\\globals.css",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-15T04:38:38.723Z",
+              "WhenOpened": "2024-12-17T04:47:57.082Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "about.tsx",
-              "DocumentMoniker": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\pages\\about.tsx",
-              "RelativeDocumentMoniker": "src\\app\\pages\\about.tsx",
-              "ToolTip": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\pages\\about.tsx",
-              "RelativeToolTip": "src\\app\\pages\\about.tsx",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAASAAAAAAAAAA==",
+              "Title": "Footer.module.css",
+              "DocumentMoniker": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\styles\\Footer.module.css",
+              "RelativeDocumentMoniker": "src\\app\\styles\\Footer.module.css",
+              "ToolTip": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\styles\\Footer.module.css",
+              "RelativeToolTip": "src\\app\\styles\\Footer.module.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-17T04:47:50.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Project.module.css",
+              "DocumentMoniker": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\styles\\Project.module.css",
+              "RelativeDocumentMoniker": "src\\app\\styles\\Project.module.css",
+              "ToolTip": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\styles\\Project.module.css",
+              "RelativeToolTip": "src\\app\\styles\\Project.module.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-17T04:31:19.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "projects.tsx",
+              "DocumentMoniker": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\pages\\projects.tsx",
+              "RelativeDocumentMoniker": "src\\app\\pages\\projects.tsx",
+              "ToolTip": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\my-website\\src\\app\\pages\\projects.tsx",
+              "RelativeToolTip": "src\\app\\pages\\projects.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-12-14T09:52:23.577Z",
+              "WhenOpened": "2024-12-17T04:30:10Z",
               "EditorCaption": ""
             }
           ]

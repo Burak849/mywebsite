@@ -59,7 +59,7 @@
     color: cyan;
     text-shadow: 0px 0px 10px cyan, 
                  0px 0px 20px cyan,
-                 0px 0px 40px cyan,
+                 0px 0px 30px cyan,
                  0px 0px 80px cyan;
     display:flex;
     flex-direction:column;
@@ -304,3 +304,5 @@
     left: 100%;
     transition: all 0.5s ease;
 }
+
+

@@ -6,9 +6,9 @@ import styles from '../styles/About.module.css';
 const AboutSection: React.FC = () => {
 
     const texts = [
-        "I am a Software Engineer from Turkey.",
+        "I am a Computer Engineer from Turkey.",
         "I love to code for Frontend Development.",
-        "Let's build something aesthetic!",
+        "Let's build something aesthetic!"
     ];
     const [displayedText, setDisplayedText] = useState(""); 
     const [currentIndex, setCurrentIndex] = useState(0); 
@@ -54,14 +54,20 @@ const AboutSection: React.FC = () => {
            
 
             <div className={styles['text-paragraf']}>
-
+                <div style={{ textShadow: 'none' }} className="group duration-500 -rotate-12 hover:-rotate-0 hover:skew-x-1 skew-x-0 hover:translate-x-6 hover:translate-y-12">
+                    <div className="group-hover:duration-400 relative rounded-2xl w-64 h-36 bg-[rgb(1_16_27/_var(--tw-bg-opacity,_1))] text-gray-50 flex flex-col justify-center items-center gap-1 before:-skew-x-[10deg] before:rounded-2xl before:absolute before:content[''] before:bg-[rgb(10_150_150/_var(--tw-bg-opacity,_1))]
+ before:right-3 before:top-0 before:w-64 before:h-32 before:-z-10">
+                        <span className="text-2xl font-bold">Burak Kurtulush</span>
+                            <p className="text-amber-300 font-thin">- Frontend Developer -</p>
+                        </div>
+                    </div>
                 <div>
-                    <h2 style={{ fontSize: 45 }}>Hello, It's Burak.</h2>
-                    <p style={{ color: 'white', textShadow: 'none', fontSize: 44 }}>
+                    <h2 style={{ fontSize: 44, color: 'white', textShadow: 'none' }}>Hello!</h2>
+                    <p style={{ color: '#FCD34D', textShadow: 'none', fontSize: 44 }}>
                         {displayedText}
                         <span>|</span> 
                     </p>
-                    <h3 style={{ color: 'white', textShadow: 'none', fontSize: 24 }}>I am a passionate software engineer with a focus on AI and Front-end development, dedicated to crafting innovative and user-centric websites.</h3>
+                    <h3 style={{ color: 'white', textShadow: 'none', fontSize: 24 }}>I am a passionate computer engineer with a focus on UI/UX and Front-end development, dedicated to crafting innovative and user-centric websites.</h3>
                 </div>
 
                 <button className={styles['custom-button']}>Contact Me</button>

@@ -2,6 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\public",
+    "\\public\\media",
     "\\src",
     "\\src\\app",
     "\\src\\app\\api",
@@ -10,6 +11,6 @@
     "\\src\\app\\styles",
     "\\src\\services"
   ],
-  "SelectedNode": "\\src\\app\\styles\\Navbar.module.css",
+  "SelectedNode": "\\src\\app\\components\\Tooltip.tsx",
   "PreviewInSolutionExplorer": false
 }

@@ -181,6 +181,7 @@ const StyledWrapper = styled.div`
     text-align: center;
     fill: #1da1f2;
     background: #000;
+    border:none;
   }
   .user {
     display: flex;
