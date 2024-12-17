@@ -1,15 +1,17 @@
 .spesifik {
     background-color: transparent;
     position:relative;
+    display:flex;
+    padding: 5%;
+    gap:10%;
+    align-items:center;
 }
 
-.fotom {
-    width: 20%;
+.gif {
+    width: 25%;
     height: auto;
-    border-radius:25%;
-    object-fit: cover;
-    border: 0px solid #fff;
     position: relative;
     z-index: 1;
-    filter: drop-shadow(1px 1px 1px  cyan);
+    filter: drop-shadow(3px 3px 3px cyan);
+    transform: scaleX(-1);
 }
