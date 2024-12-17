@@ -7,7 +7,7 @@ const AboutSection: React.FC = () => {
 
     const texts = [
         "I am a Software Engineer from Turkey.",
-        "I love to code for Frontend Development",
+        "I love to code for Frontend Development.",
         "Let's build something aesthetic!",
     ];
     const [displayedText, setDisplayedText] = useState(""); 
@@ -56,12 +56,12 @@ const AboutSection: React.FC = () => {
             <div className={styles['text-paragraf']}>
 
                 <div>
-                    <h2 style={{ fontSize: 34 }}>Hello, It's Burak.</h2>
-                    <p style={{ color: 'white', textShadow: 'none', fontSize: 40 }}>
+                    <h2 style={{ fontSize: 45 }}>Hello, It's Burak.</h2>
+                    <p style={{ color: 'white', textShadow: 'none', fontSize: 44 }}>
                         {displayedText}
                         <span>|</span> 
                     </p>
-                    <h3 style={{ color: 'white', textShadow: 'none', fontSize: 22 }}>I am a passionate software engineer with a focus on AI and Front-end development, dedicated to crafting innovative and user-centric websites.</h3>
+                    <h3 style={{ color: 'white', textShadow: 'none', fontSize: 24 }}>I am a passionate software engineer with a focus on AI and Front-end development, dedicated to crafting innovative and user-centric websites.</h3>
                 </div>
 
                 <button className={styles['custom-button']}>Contact Me</button>

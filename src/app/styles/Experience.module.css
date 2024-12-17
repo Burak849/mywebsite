@@ -1,3 +1,15 @@
 .spesifik {
     background-color: transparent;
+    position:relative;
+}
+
+.fotom {
+    width: 20%;
+    height: auto;
+    border-radius:25%;
+    object-fit: cover;
+    border: 0px solid #fff;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(1px 1px 1px  cyan);
 }

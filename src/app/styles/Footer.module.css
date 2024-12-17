@@ -1,5 +1,5 @@
 .foot {
-    background-color: #000B0D;
+    background-color: transparent; /*#000B0D*/
     display:flex;
     justify-content:center;
     align-items:center;
