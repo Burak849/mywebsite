@@ -65,8 +65,8 @@ export default function Home() {
         <>
             <Navbar />
             <AboutSection />
-            <SkillSection />
             <ExperienceSection />
+            <SkillSection />
             <ProjectSection />
             <Footer />
 
@@ -83,7 +83,7 @@ export default function Home() {
                     top: 0,
                     left: 0,
                     pointerEvents: "none",
-                    zIndex: -1,
+                    zIndex: -10,
                     width: "100%",  
                     height: "100%",
 
