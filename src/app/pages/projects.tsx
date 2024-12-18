@@ -55,6 +55,7 @@ const StyledWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 2vh;
+  overflow:hidden;
 
   .card {
     position: relative;
@@ -65,7 +66,7 @@ const StyledWrapper = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation: slide 10s linear infinite;
+    animation: slide 5s linear infinite;
     animation-delay: calc(1s * (var(i) - 1));
   }
   .card::before {
