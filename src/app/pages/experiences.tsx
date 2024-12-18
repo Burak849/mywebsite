@@ -5,7 +5,7 @@ import { relative } from 'path';
 const ExperienceSection = () => {
     return (
 
-        <div style={{ height: '90vh', width:'auto' }}>
+        <div style={{ height: '50vh', width:'auto', padding:'2vh', }}>
             <h1 style={{ position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>About me</h1>
         <div className={styles['spesifik']}>
 

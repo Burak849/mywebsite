@@ -3,7 +3,7 @@ import styles from '../styles/Skill.module.css';
 
 const SkillSection = () => {
     return (
-        <div className={styles.skill}>
+        <div style={{ height: '50vh', width: 'auto', padding: '2vh', }}>
 
            
         </div>

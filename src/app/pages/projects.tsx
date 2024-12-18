@@ -10,6 +10,8 @@ const ProjectSection = () => {
         { title: "Proje 4", githubLink: "#", readMoreLink: "#" },
     ];
 
+
+
     return (
         <div style={{ padding:'3vh',height: '90vh', width: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap:'15vh' }}>
             <h1 style={{ position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>Projects</h1>
@@ -17,7 +19,7 @@ const ProjectSection = () => {
             <StyledWrapper>
                 <div className="kaydirici">
                 {projects.map((project, index) => (
-                    <div className="card" key={index}>
+                    <div className="card" key={index} >
                         <b />
                         <div className="content">
                             <p className="title">{project.title}</p><br />
@@ -64,6 +66,7 @@ const StyledWrapper = styled.div`
     align-items: center;
     flex-direction: column;
     animation: slide 10s linear infinite;
+    animation-delay: calc(1s * (var(i) - 1));
   }
   .card::before {
     content: '';
