@@ -7,7 +7,7 @@
 //    database: process.env.DB_DATABASE,
 //    options: {
 //        encrypt: true,
-//        trustServerCertificate: true, // Sertifika sorunu yaşarsanız bunu ekleyin.
+//        trustServerCertificate: true,
 //    },
 //};
 
