@@ -7,9 +7,10 @@
     "\\src\\app",
     "\\src\\app\\api",
     "\\src\\app\\components",
-    "\\src\\app\\pages",
+    "\\src\\app\\sections",
     "\\src\\app\\styles",
     "\\src\\services"
   ],
+  "SelectedNode": "\\src\\app\\styles\\Skill.module.css",
   "PreviewInSolutionExplorer": false
 }
