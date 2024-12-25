@@ -1,9 +1,9 @@
 .webdevelopment {
     box-shadow: 0 2px 12px rgba(0, 0, 0, .4), 0 1px 35px 8px rgba(0, 0, 0, .3), inset 0 -3px 0 rgba(0, 0, 0, .2);
-    padding: 8rem;
+    padding: 9rem;
     background-color: transparent;
     border-radius: 1rem;
-    gap: 2.5rem;
+    gap: 1rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     height: auto;
     display: grid;
@@ -17,7 +17,7 @@
     padding: 8rem;
     background-color: transparent;
     border-radius: 1rem;
-    gap: 2.5rem;
+    gap: 1rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     height: auto;
     display: grid;
@@ -31,7 +31,7 @@
     padding: 8rem;
     background-color: transparent;
     border-radius: 1rem;
-    gap: 2.5rem;
+    gap: 1rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     height: auto;
     display: grid;
@@ -44,9 +44,10 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    width:6rem;
     gap: 1.5rem;
     border-radius: 1.25rem;
-    padding: 2rem;
+    padding: 1rem;
     border-style: solid;
     border-width: 0.25rem;
     text-align: center;
@@ -78,6 +79,7 @@
     flex-direction: column;
     justify-content: space-around;
     height: inherit;
+    gap:40px;
 }
 .maincont {
     display: flex;
