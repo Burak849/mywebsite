@@ -15,7 +15,21 @@
 .design {
     box-shadow: 0 2px 12px rgba(0, 0, 0, .4), 0 1px 35px 8px rgba(0, 0, 0, .3), inset 0 -3px 0 rgba(0, 0, 0, .2);
     padding: 8rem;
-    background-color: #323233;
+    background-color: transparent;
+    border-radius: 1rem;
+    gap: 2.5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    height: auto;
+    display: grid;
+    z-index: 10;
+    position: relative;
+    margin: 0;
+    box-sizing: border-box;
+}
+.database {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .4), 0 1px 35px 8px rgba(0, 0, 0, .3), inset 0 -3px 0 rgba(0, 0, 0, .2);
+    padding: 8rem;
+    background-color: transparent;
     border-radius: 1rem;
     gap: 2.5rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -36,14 +50,39 @@
     border-style: solid;
     border-width: 0.25rem;
     text-align: center;
-    background-color: #323233;
+    background-color: #0a0a0a;
 }
 
 @media (max-width: 1024px) { 
-    .skill-item {
+    .skillitem {
         align-items: center; 
         padding: 0.75rem; 
         gap: 0.5rem; 
         border: none;
     }
 }
+.titles {
+    position: absolute;
+    top: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    padding-left: 1rem; 
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; 
+    border-radius: 1rem 1rem 0 0; 
+}
+
+.artcont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: inherit;
+}
+.maincont {
+    display: flex;
+    gap: 40px; 
+    justify-content: center;
+}
+
+
