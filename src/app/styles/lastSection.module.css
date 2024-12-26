@@ -1,8 +1,13 @@
 .contactform {
     display: flex;
+    height: auto;
     width: auto;
     gap: 2rem;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .label {

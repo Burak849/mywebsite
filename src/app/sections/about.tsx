@@ -13,15 +13,15 @@ const AboutSection: React.FC = () => {
     const [displayedText, setDisplayedText] = useState(""); 
     const [currentIndex, setCurrentIndex] = useState(0); 
     const [isDeleting, setIsDeleting] = useState(false); 
-    const speed = 100; // Yazma hızı
-    const deleteSpeed = 50; // Silme hızı
-    const delay = 1500; // Yazma tamamlandığında bekleme süresi
+    const speed = 100; 
+    const deleteSpeed = 50; 
+    const delay = 1500; 
 
     useEffect(() => {
         let timeout: NodeJS.Timeout;
 
         if (!isDeleting) {
-            // Yazma efekti
+            
             if (displayedText.length < texts[currentIndex].length) {
                 timeout = setTimeout(() => {
                     setDisplayedText(
@@ -29,17 +29,17 @@ const AboutSection: React.FC = () => {
                     );
                 }, speed);
             } else {
-                // Tüm yazı yazıldığında bekle ve silmeye geç
+                
                 timeout = setTimeout(() => setIsDeleting(true), delay);
             }
         } else {
-            // Silme efekti
+            
             if (displayedText.length > 0) {
                 timeout = setTimeout(() => {
                     setDisplayedText((prev) => prev.slice(0, -1));
                 }, deleteSpeed);
             } else {
-                // Tüm metin silindiğinde bir sonraki metne geç
+                
                 setIsDeleting(false);
                 setCurrentIndex((prev) => (prev + 1) % texts.length); 
             }

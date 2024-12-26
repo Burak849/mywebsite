@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { connectToDatabase } from '@/services/db';
+/*import { connectToDatabase } from '@/services/db';*/
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     //if (req.method === 'POST') {
