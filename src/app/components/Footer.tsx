@@ -1,11 +1,14 @@
 import React from 'react';
-import styles from '../styles/Footer.module.css'; // CSS module importu
+import styles from '../styles/Footer.module.css';
 import Tooltip from '../components/Tooltip';
 import styled from 'styled-components';
-
+import { useState } from "react";
 
 const Footer = () => {
-    return (
+  
+
+    return (<section className={styles.foot}>
+        <article>
         <StyledWrapper>
             <div className="card">
                 <a className="social-link1">
@@ -38,6 +41,10 @@ const Footer = () => {
                 </a>
             </div>
         </StyledWrapper>
+        </article>
+        
+    </section>
+
     );
 }
 

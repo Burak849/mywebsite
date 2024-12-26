@@ -1,0 +1,42 @@
+.contactform {
+    display: flex;
+    width: auto;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button {
+    background-color: #0070f3;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .button:disabled {
+        background-color: #ccc;
+    }
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
