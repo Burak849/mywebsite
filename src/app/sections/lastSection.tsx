@@ -91,8 +91,9 @@ const LastSection = () => {
 
                  
 
-                <div>
-                <form className={styles.contactform}>
+                <div className={styles.contactform}>
+                <h1>Contact Form</h1>
+                <form>
 
                     <div className="inputGroup">
                         <input type="text" id="name" required autoComplete="off" />
@@ -110,7 +111,8 @@ const LastSection = () => {
                         <textarea required id="message" autoComplete="off"></textarea>
                         <label htmlFor="message">Message</label>
                     </div>
-                </form>
+                    </form>
+                    <button type="submit" style={{ backgroundColor: 'red', padding: '1rem', borderRadius:'2rem' }}>Send Message</button>
                 </div>
                 </StyledWrapper>
 
@@ -431,8 +433,8 @@ const StyledWrapper = styled.div`
     font-size: 100%;
     padding: 0.8em;
     outline: none;
-    border: 1px solid rgb(200, 200, 200);
-    background-color: transparent;
+    border: 3px solid rgb(200, 200, 200);
+    background-color: black;
     border-radius: 20px;
     width: 100%;
   }
@@ -454,7 +456,7 @@ const StyledWrapper = styled.div`
   margin: 0em;
   margin-left: 1.3em;
   padding: 0.4em;
-  background-color: #000b0d;
+  background-color: black;
   color:white;
 }
 

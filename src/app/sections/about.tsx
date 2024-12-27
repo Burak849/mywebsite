@@ -72,7 +72,10 @@ const AboutSection: React.FC = () => {
 
                 <button className={styles['custom-button']}>Contact Me</button>
             </div>
-            <img src="../media/ppp.jpg" alt="Profile Image" className={styles['profile-image']} />
+
+            <div className={styles.imgbg }>
+            <img src="../media/pp-removebg1.png" alt="Profile Image" className={styles['profile-image']} />
+            </div>
 
            
 
