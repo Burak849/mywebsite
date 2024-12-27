@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styles from '../styles/lastSection.module.css';
+import stylenei from '../styles/About.module.css';
 import styled from 'styled-components';
 import { useState } from "react";
 
@@ -44,16 +45,28 @@ const LastSection = () => {
         }
     };
 
+    const [isRocketLaunching, setIsRocketLaunching] = useState(false);
+
+    const handleRocketLaunch = () => {
+        setIsRocketLaunching(true);
+
+        setTimeout(() => {
+            setIsRocketLaunching(false);
+        }, 3000); 
+    };
+
     return (
 
-        
-        <article style={{
+
+        <section style={{
             display: 'flex',
             justifyContent: 'space-around'
         }}>
 
             <StyledWrapper>
-                <div className="rocket">
+
+                <article>
+                    <div className={`rocket ${isRocketLaunching ? 'launching' : ''}`}>
                     <div className="rocket-body">
                         <div className="body" />
                         <div className="fin fin-left" />
@@ -72,28 +85,16 @@ const LastSection = () => {
                         <li />
                         <li />
                     </ul>
-                    <ul className="star">
-                        <li />
-                        <li />
-                        <li />
-                        <li />
-                        <li />
-                        <li />
-                        <li />
-                    </ul>
                 </div>
-            </StyledWrapper>
+                </article>
+                </StyledWrapper>
 
-            <StyledWrapper>
+                <StyledWrapper>
 
-
-                
-
-                 
-
+                <article>
                 <div className={styles.contactform}>
-                <h1>Contact Form</h1>
-                <form>
+                        <h1>Contact Form</h1>
+                        <form style={{ display: 'flex', width: '25rem', flexDirection: 'column' }}>
 
                     <div className="inputGroup">
                         <input type="text" id="name" required autoComplete="off" />
@@ -111,12 +112,28 @@ const LastSection = () => {
                         <textarea required id="message" autoComplete="off"></textarea>
                         <label htmlFor="message">Message</label>
                     </div>
-                    </form>
-                    <button type="submit" style={{ backgroundColor: 'red', padding: '1rem', borderRadius:'2rem' }}>Send Message</button>
-                </div>
+                        </form>
+                        <button type="submit" id="send" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }} className={stylenei['custom-button']} onClick={handleRocketLaunch}>
+                            <div className="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="2em" width="2em">
+                                    <g style={{ filter: 'url(#shadow)' }}>
+                                        <path fill="currentColor" d="M14.2199 21.63C13.0399 21.63 11.3699 20.8 10.0499 16.83L9.32988 14.67L7.16988 13.95C3.20988 12.63 2.37988 10.96 2.37988 9.78001C2.37988 8.61001 3.20988 6.93001 7.16988 5.60001L15.6599 2.77001C17.7799 2.06001 19.5499 2.27001 20.6399 3.35001C21.7299 4.43001 21.9399 6.21001 21.2299 8.33001L18.3999 16.82C17.0699 20.8 15.3999 21.63 14.2199 21.63ZM7.63988 7.03001C4.85988 7.96001 3.86988 9.06001 3.86988 9.78001C3.86988 10.5 4.85988 11.6 7.63988 12.52L10.1599 13.36C10.3799 13.43 10.5599 13.61 10.6299 13.83L11.4699 16.35C12.3899 19.13 13.4999 20.12 14.2199 20.12C14.9399 20.12 16.0399 19.13 16.9699 16.35L19.7999 7.86001C20.3099 6.32001 20.2199 5.06001 19.5699 4.41001C18.9199 3.76001 17.6599 3.68001 16.1299 4.19001L7.63988 7.03001Z" />
+                                        <path fill="currentColor" d="M10.11 14.4C9.92005 14.4 9.73005 14.33 9.58005 14.18C9.29005 13.89 9.29005 13.41 9.58005 13.12L13.16 9.53C13.45 9.24 13.93 9.24 14.22 9.53C14.51 9.82 14.51 10.3 14.22 10.59L10.64 14.18C10.5 14.33 10.3 14.4 10.11 14.4Z" />
+                                    </g>
+                                    <defs>
+                                        <filter id="shadow">
+                                            <feDropShadow floodOpacity="0.5" stdDeviation="0.6" dy={1} dx={0} />
+                                        </filter>
+                                    </defs>
+                                </svg>
+                            </div>
+                            Send Message
+                        </button>
+                    </div>
+                </article>
                 </StyledWrapper>
 
-        </article>
+        </section>
 
     
 
@@ -129,7 +146,13 @@ const StyledWrapper = styled.div`
     position: relative;
     width: 80px;
     left: calc(50% - 40px);
+    transition: transform 2.5s linear; 
   }
+
+  .rocket.launching {
+      transform:rotate(5deg);
+        transform: translateY(-300rem); 
+    }
 
   .rocket .rocket-body {
     width: 80px;
@@ -281,89 +304,6 @@ const StyledWrapper = styled.div`
     animation: fumes 20s infinite;
   }
 
-  .star li {
-    list-style: none;
-    position: absolute;
-  }
-
-  .star li:before, .star li:after {
-    content: '';
-    position: absolute;
-    background-color: #f5f5f5;
-  }
-
-  .star li:before {
-    width: 10px;
-    height: 2px;
-    border-radius: 50%;
-  }
-
-  .star li:after {
-    height: 8px;
-    width: 2px;
-    left: 4px;
-    top: -3px;
-  }
-
-  .star li:first-child {
-    top: -30px;
-    left: -210px;
-    animation: twinkle 0.4s infinite;
-  }
-
-  .star li:nth-child(2) {
-    top: 0;
-    left: 60px;
-    animation: twinkle 0.5s infinite;
-  }
-
-  .star li:nth-child(2):before {
-    height: 1px;
-    width: 5px;
-  }
-
-  .star li:nth-child(2):after {
-    width: 1px;
-    height: 5px;
-    top: -2px;
-    left: 2px;
-  }
-
-  .star li:nth-child(3) {
-    left: 120px;
-    top: 220px;
-    animation: twinkle 1s infinite;
-  }
-
-  .star li:nth-child(4) {
-    left: -100px;
-    top: 200px;
-    animation: twinkle 0.5s ease infinite;
-  }
-
-  .star li:nth-child(5) {
-    left: 170px;
-    top: 100px;
-    animation: twinkle 0.4s ease infinite;
-  }
-
-  .star li:nth-child(6) {
-    top: 87px;
-    left: -79px;
-    animation: twinkle 0.2s infinite;
-  }
-
-  .star li:nth-child(6):before {
-    height: 1px;
-    width: 5px;
-  }
-
-  .star li:nth-child(6):after {
-    width: 1px;
-    height: 5px;
-    top: -2px;
-    left: 2px;
-  }
 
   @keyframes fumes {
     50% {
@@ -425,7 +365,6 @@ const StyledWrapper = styled.div`
   .inputGroup {
     font-family: 'Segoe UI', sans-serif;
     margin: 1em 0 1em 0;
-    max-width: 190px;
     position: relative;
   }
 
@@ -437,8 +376,9 @@ const StyledWrapper = styled.div`
     background-color: black;
     border-radius: 20px;
     width: 100%;
+    height:auto;
+    
   }
-
 
   .inputGroup label {
     font-size: 100%;

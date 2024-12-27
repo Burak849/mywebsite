@@ -30,6 +30,7 @@ body {
 }
 
 .bg-animation {
+    opacity:0.4;
     position: fixed;
     top: 0;
     left: 0;
