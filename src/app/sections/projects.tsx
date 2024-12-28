@@ -14,8 +14,9 @@ const ProjectSection = () => {
 
     return (
         <div style={{ padding:'3vh',height: '90vh', width: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap:'15vh' }}>
-            <h1 style={{ position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>Projects</h1>
             
+            <h1 style={{ position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>My<span style={{ color: 'cyan', marginLeft: 10 }}>Projects</span></h1>
+
             <StyledWrapper>
                 <div className="kaydirici">
                 {projects.map((project, index) => (

@@ -45,3 +45,18 @@
 .error {
     color: red;
 }
+
+.contactContainer {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .4), 0 1px 35px 8px rgba(0, 0, 0, .3), inset 0 -3px 0 rgba(0, 0, 0, .2);
+    padding: 5rem;
+    background-color: black;
+    border: 1px solid teal;
+    border-radius: 1rem;
+    height: auto;
+    display: flex;
+    z-index: 10;
+    position: relative;
+    margin: 0;
+    justify-items: center;
+    box-sizing: border-box;
+}

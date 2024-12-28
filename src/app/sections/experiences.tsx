@@ -6,7 +6,7 @@ const ExperienceSection = () => {
     return (
 
         <section style={{ display: 'flex', flexDirection: 'column', height: 'auto', width: 'auto', padding: '2vh', position: 'relative' }}>
-            <h1 style={{ position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>About me</h1>
+            <h1 style={{ position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>About <span style={{ color: 'cyan', marginLeft: 10 }}>Me</span></h1>
         <div className={styles['spesifik']}>
 
 

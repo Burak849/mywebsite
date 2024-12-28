@@ -4,7 +4,8 @@ import styled from 'styled-components';
 
 const SkillSection = () => {
     return (<>
-        <section style={{ position: 'relative' }}>
+        <section style={{ position: 'relative', display: 'flex', gap: '5rem', flexDirection: 'column' }}>
+            <h1 style={{ position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>My<span style={{ color: 'cyan', marginLeft: 10 }}>Skills</span></h1>
             <div className={styles.maincont }>
 
                 <article className={styles.webdevelopment}>
