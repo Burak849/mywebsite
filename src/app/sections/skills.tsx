@@ -5,12 +5,12 @@ import styled from 'styled-components';
 const SkillSection = () => {
     return (<>
         <section style={{ position: 'relative', display: 'flex', gap: '5rem', flexDirection: 'column' }}>
-            <h1 style={{ position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>My<span style={{ color: 'cyan', marginLeft: 10 }}>Skills</span></h1>
+            <h1 style={{ position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>My<span style={{ color: '#FCD34D', marginLeft: 10 }}>Skills</span></h1>
             <div className={styles.maincont }>
 
                 <article className={styles.webdevelopment}>
                     <div className={styles.titles}>
-                    <h1>Web Development</h1>
+                        <h1 style={{ fontSize:'1.5rem' }}>Web Development</h1>
                     </div>
                     <div className={styles.skillitem} style={{ borderColor:'rgb(241, 102, 42)' }}>
 
@@ -122,7 +122,7 @@ const SkillSection = () => {
 
             <article className={styles.design}>
                 <div className={styles.titles}>
-                    <h1>Designing Tools</h1>
+                            <h1 style={{fontSize:'1.5rem'}}>Designing Tools</h1>
                 </div>
                     <div className={styles.skillitem} style={{ borderColor: 'rgb(241, 102, 42)' }}>
 
@@ -150,7 +150,7 @@ const SkillSection = () => {
 
             <article className={styles.database}>
                     <div className={styles.titles}>
-                        <h1>Databases</h1>
+                            <h1 style={{ fontSize: '1.5rem' }}>Databases</h1>
                     </div>
 
                     <div className={styles.skillitem} style={{ borderColor: 'rgb(241, 102, 42)' }}>

@@ -7,7 +7,6 @@ import ExperienceSection from "./sections/experiences";
 import ProjectSection from "./sections/projects";
 import Footer from "./components/Footer";
 import SkillSection from "./sections/skills";
-import LastSection from "./sections/lastsection";
 import Education from "./sections/education";
 
 
@@ -21,7 +20,7 @@ export default function Home() {
             <ExperienceSection />
             <SkillSection />
             <ProjectSection />
-            <LastSection />
+            
         </>
     );
 }

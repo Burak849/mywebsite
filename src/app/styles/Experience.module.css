@@ -1,10 +1,9 @@
 .spesifik {
     background-color: transparent;
-    position:relative;
-    display:flex;
-    padding: 5%;
-    gap:10%;
-    align-items:center;
+    position: relative;
+    display: flex;
+    gap: 10%;
+    align-items: center;
 }
 
 .gif {
@@ -15,3 +14,32 @@
     filter: drop-shadow(3px 3px 3px cyan);
     transform: scaleX(-1);
 }
+
+.sectioncont {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    padding: 10vh;
+    position: relative;
+    background: linear-gradient(to bottom left, #1B2C38, #071414);
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+}
+
+    .sectioncont::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../../../public/media/banner1.jpg') no-repeat center center;
+        background-size: cover;
+        filter: blur(12px); 
+        opacity: 0.5; 
+        z-index: -1; 
+        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+
+    }

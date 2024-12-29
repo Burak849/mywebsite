@@ -82,7 +82,7 @@ export default function RootLayout({
                             y1={positions[index].y}
                             x2={pos.x}
                             y2={pos.y}
-                            stroke="cyan"
+                            stroke="#FCD34D"
                             strokeWidth="10"
                             strokeOpacity={0.8}
                             strokeLinecap="round"

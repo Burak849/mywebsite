@@ -5,19 +5,26 @@ import { relative } from 'path';
 const ExperienceSection = () => {
     return (
 
-        <section style={{ display: 'flex', flexDirection: 'column', height: 'auto', width: 'auto', padding: '2vh', position: 'relative' }}>
-            <h1 style={{ position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>About <span style={{ color: 'cyan', marginLeft: 10 }}>Me</span></h1>
+        <section className={styles.sectioncont }>
+            <h1 style={{ cursor: 'default', position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>About <span style={{ color: '#FCD34D', marginLeft: 10 }}>Me</span></h1>
+                    <br/>
         <div className={styles['spesifik']}>
 
 
                 <img src="../media/about-bg.gif" alt="About BG" className={styles['gif']} />
-                <p style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '2vh' }} >
-                    Lorem ipsum dolor sit amet. Sit provident nemo qui dicta assumenda est optio ipsa et rerum repudiandae ab asperiores repudiandae. Id fuga aliquid in ipsam eveniet et exercitationem perferendis est saepe dolorem ab laudantium sint et minus dolor. Et sunt saepe qui consectetur sint ut cupiditate dolorem. Hic repellendus neque ut sint libero ut explicabo nihil eos consequatur nesciunt.
+                <p style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '2vh', cursor: 'default' }} >
+                    My name is Burak Kurtulush, and I am a 25-year-old recently graduated Computer Engineer. My passion lies in coding, particularly in frontend development, but I am actively honing my skills in full-stack development. I hold dual citizenship, which grants me the privilege to live and work in both Europe and Turkey.
+                    <br/>
+                    <br/>
+                    I have spent several months in various countries, allowing me to immerse myself in diverse cultures. This unique exposure has not only broadened my worldview but also inspired my curiosity to explore even more.
+                    <br/>
+                    <br />
 
-                    Eos incidunt natus et corporis atque qui dolore sint ex velit illo aut delectus iure et galisum impedit. Est dolores mollitia est voluptatem perferendis ad nemo libero qui possimus omnis? Et voluptatem aspernatur et dignissimos maxime sed dolores recusandae et voluptates nisi At quidem galisum? Est eius labore At voluptatum aliquid est quia quia At ducimus deleniti.
+                    Beyond my professional interests, I enjoy playing football, maintaining my fitness routine, and expressing creativity through acoustic guitar. Additionally, I am an avid language enthusiast and constantly seek opportunities to improve my linguistic abilities.
+                    <br/>
+                    <br />
 
-                    Aut aliquid ipsa aut porro doloremque et delectus debitis et repellendus dolore ut animi facere in aperiam quis est aliquid sequi. Est laboriosam rerum eum dolores consequatur qui fugiat tenetur. Quo molestiae perspiciatis et nobis repellat sed sapiente recusandae et quis galisum est debitis delectus non dignissimos sapiente in quos quisquam. Sed odit ullam aut omnis possimus sed quia quisquam id reprehenderit quasi eos reprehenderit magni qui optio deleniti ex nulla quaerat?
-
+                    In my spare time, I delve into photography, capturing moments and landscapes that tell stories. I also have a keen interest in cooking, where I experiment with international cuisines. Lastly, I enjoy solving puzzles and challenges, such as escape rooms and logic games, as they sharpen my problem-solving skills while providing fun and excitement.
                 </p>
 
             
