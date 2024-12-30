@@ -1,0 +1,84 @@
+.sectioncont {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height:75vh;
+    padding:2rem;
+    gap: 1rem;
+}
+.cardbg {
+    background: linear-gradient(135deg, rgba(248, 250, 252, .1), rgba(3, 7, 17, .9));
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(3px);
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.h3class {
+    font-size: larger;
+    font-weight:600;
+    color: rgb(191 219 254 / var(--tw-text-opacity));
+}
+.h2class {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: #FCD34D;
+}
+
+
+.timeline {
+    position: relative;
+}
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 10px;
+        width: 2px;
+        height: 100%;
+        background-color: teal;
+    }
+
+.timelineItem {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.3rem;
+}
+
+    .timelineItem::before {
+        content: '';
+        position: absolute;
+        top: 1.8rem;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background-color: teal;
+        border-radius: 50%;
+        transform: translate(60%);
+    }
+    .languages{
+        flex:1;
+    }
+
+.progressBar {
+    position: relative;
+    width: 100%;
+    height: 1rem;
+    background-color: #e5e7eb24;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+
+    .progressBar span {
+        display: block;
+        height: 100%;
+        background-color: teal;
+        border-radius: 0.5rem;
+    }

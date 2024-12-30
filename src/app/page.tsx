@@ -16,8 +16,8 @@ export default function Home() {
     return (
         <>
             <AboutSection />
-            <Education />
             <ExperienceSection />
+            <Education />
             <SkillSection />
             <ProjectSection />
             

@@ -58,7 +58,7 @@ const AboutSection: React.FC = () => {
                     <div className="group-hover:duration-400 relative rounded-2xl w-64 h-36 bg-[rgb(1_16_27/_var(--tw-bg-opacity,_1))] text-gray-50 flex flex-col justify-center items-center gap-1 before:-skew-x-[10deg] before:rounded-2xl before:absolute before:content[''] before:bg-[rgb(10_150_150/_var(--tw-bg-opacity,_1))]
  before:right-3 before:top-0 before:w-64 before:h-32 before:-z-10">
                         <span className="text-2xl font-bold">Burak Kurtulush</span>
-                        <p className="text-amber-300 font-thin">- Jr. Frontend Developer -</p>
+                        <p className="text-amber-300 font-thin">- Jr. Software Developer -</p>
                     </div>
                 </div>
                 <div>
