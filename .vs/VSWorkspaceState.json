@@ -11,6 +11,6 @@
     "\\src\\app\\styles",
     "\\src\\services"
   ],
-  "SelectedNode": "\\public\\media\\about-bg.gif",
+  "SelectedNode": "\\src\\app\\sections\\education.tsx",
   "PreviewInSolutionExplorer": false
 }

@@ -1,6 +1,26 @@
+.skillsection{
+    display:grid;
+    align-content:center;
+    gap:2rem;
+    height:auto;
+    padding:2rem;
+    position:relative;
+    perspective:1000px;
+}
 .container {
     display: flex;
     justify-content: center;
     align-items:center;
     background-color: transparent;
 }
+
+.animbg {
+    display:flex;
+    height:auto;
+    width:auto;
+    align-items:center;
+    justify-content:center;
+    padding:5rem;
+
+}
+
