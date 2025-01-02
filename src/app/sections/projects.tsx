@@ -18,27 +18,23 @@ const ProjectSection = () => {
             <article className={styles.animbg}>
                 <StyledWrapper>
                     <div className="card">
-                        <p>
+                        <p style={{ background: 'url(media/reservation-system.png)', backgroundSize: 'cover', height: 'auto', width: '100%' }}>
                             <span>Barber's' Reservation System <br />(CRM App)</span>
                             <button>Details</button>
                         </p>
-                        <p>
+                        <p style={{ background: 'url(media/hote-booking-ss.png)', backgroundSize: 'cover', height: 'auto', width: '100%' }}>
                             <span>Hotel SPA with RestApi</span>
                             <button>Details</button>
                         </p>
-                        <p>
-                            <span>Portfolio</span>
+                        <p style={{ background: 'url(media/blog-ss.png)', backgroundSize: 'cover', height: 'auto', width: '100%' }}>
+                            <span>Blog</span>
                             <button>Details</button>
                         </p>
-                        <p>
+                        <p style={{ background: 'url(media/vizite2.png)', backgroundSize: 'cover', height: 'auto', width: '100%' }}>
                             <span>Doctor's Referral Form</span>
                             <button>Details</button>
                         </p>
-                        <p>
-                            <span>Suber</span>
-                            <button>Details</button>
-                        </p>
-                        <p>
+                        <p style={{ background: 'url(media/eventolog.png)', backgroundSize: 'cover', height: 'auto', width: '100%' }}>
                             <span>Eventolog</span>
                             <button>Details</button>
                         </p>
@@ -56,38 +52,32 @@ const StyledWrapper = styled.div`
     width: 100%;
     height: 25rem;
     border-radius: 5px;
-    background: black;
+    background: transparent;
     border: 1px solid teal;
     display: flex;
     gap: .4em;
     padding: .4em;
-    animation: animate 30s linear infinite;
+    box-shadow: 0px 0px 10px teal;
+
   }
 
-  @keyframes animate {
-  100% {
-    filter: hue-rotate(360deg);
-  }
-}
   .card p {
     height: 100%;
     flex: 1;
     overflow: hidden;
     cursor: pointer;
     border-radius: 5px;
+    border: 1px solid teal;
     transition: all .5s;
-    background: linear-gradient(135deg, #f8fafc1a, #030711e6);
-    box-shadow: 0px 0px 2px teal,
-                0px 0px 2px teal inset;
     display: flex;
     justify-content: center;
+    font-weight:800;
     align-items: center;
   }
 
   .card p:hover {
     flex: 6;
   }
-
   .card p span {
     min-width: 14em;
     padding: .5em;
@@ -101,6 +91,9 @@ const StyledWrapper = styled.div`
   }
 
   .card p:hover span {
+      height:auto
+      width:100%;
+      backdrop-filter: blur(3px);
     transform: rotate(0);
     opacity:1;
   }
