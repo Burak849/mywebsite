@@ -11,6 +11,6 @@
     "\\src\\app\\styles",
     "\\src\\services"
   ],
-  "SelectedNode": "\\public\\media\\eventolog.png",
+  "SelectedNode": "\\src\\app\\components\\Counter.tsx",
   "PreviewInSolutionExplorer": false
 }

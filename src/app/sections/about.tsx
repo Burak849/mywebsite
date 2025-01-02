@@ -122,15 +122,19 @@ const AboutSection: React.FC = () => {
                 <img src="../media/pp-removebg1.png" alt="Profile Image" className={styles['profile-image']} />
             </div>
 
-
-
-
         </div>
 
     );
 }
 
 const StyledWrapper = styled.div`
+#storage_number {
+  font-family:Arial;
+  font-size:1.5rem;
+  margin:4rem auto 1rem auto;
+  width:200px;
+}
+
   .card {
     display: flex;
     height: 70px;
