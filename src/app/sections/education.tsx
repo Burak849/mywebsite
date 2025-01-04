@@ -5,7 +5,7 @@ import styles from '../styles/Education.module.css';
 
 const Education = () => {
     return (
-        <section className={styles.sectioncont} id="education">
+        <section className={`${styles.sectioncont} fade-in`} id="education">
 
             <article className={styles.cardbg}>
                 <h2 className={styles.h2class}>Education</h2>

@@ -5,60 +5,99 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import { FaAngleDoubleUp } from "react-icons/fa";
+
 
 export default function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    const trailRef = useRef<HTMLDivElement[]>([]);
     const trailLength = 10;
     const [positions, setPositions] = useState<{ x: number; y: number }[]>(
-        Array(trailLength).fill({ x: 10, y: 10 })
+        Array(trailLength).fill({ x: 0, y: 0 })
     );
 
     useEffect(() => {
+        let animationFrame: number;
+
         const handleMouseMove = (event: MouseEvent) => {
             const { clientX: x, clientY: y } = event;
-            setPositions((prevPositions) => {
-                const newPositions = [{ x, y }, ...prevPositions.slice(0, trailLength - 1)];
-                return newPositions;
+            animationFrame = requestAnimationFrame(() => {
+                setPositions((prevPositions) => [
+                    { x, y },
+                    ...prevPositions.slice(0, trailLength - 1),
+                ]);
             });
         };
 
-        const handleMouseLeave = () => {
-            setPositions(Array(trailLength).fill({ x: -100, y: -100 }));
-        };
-
         document.addEventListener("mousemove", handleMouseMove);
-        document.addEventListener("mouseleave", handleMouseLeave);
 
         return () => {
             document.removeEventListener("mousemove", handleMouseMove);
-            document.removeEventListener("mouseleave", handleMouseLeave);
+            cancelAnimationFrame(animationFrame);
         };
     }, [trailLength]);
 
-    const handleHover = (index: number) => {
-        const trailElement = trailRef.current[index];
-        if (trailElement) {
-            trailElement.style.stroke = "#ffffff";
-            trailElement.style.strokeWidth = "12";
+    useEffect(() => {
+        const sections = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        
+                        entry.target.classList.add("show");
+                        entry.target.classList.remove("hide");
+                    } else {
+                        
+                        entry.target.classList.add("hide");
+                        entry.target.classList.remove("show");
+                    }
+                });
+            },
+            { threshold: 0.1 } 
+        );
+
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
+
+        return () => {
+            sections.forEach((section) => {
+                observer.unobserve(section);
+            });
+        };
+    }, []);
+
+
+    window.onload = () => {
+        const backToTopButton = document.getElementById('back-to-top') as HTMLButtonElement;
+
+        if (backToTopButton) {
+           
+            window.onscroll = function () {
+                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                    backToTopButton.style.display = "block";
+                } else {
+                    backToTopButton.style.display = "none";
+                }
+            };
+
+            
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
         }
     };
 
-    const handleMouseOut = (index: number) => {
-        const trailElement = trailRef.current[index];
-        if (trailElement) {
-            trailElement.style.stroke = "#ffea00";
-            trailElement.style.strokeWidth = "10";
-        }
-    };
+
 
     return (
         <html lang="en">
             <body>
+                {/* Background Animation */}
                 <div className="bg-animation">
                     <div id="stars"></div>
                     <div id="stars2"></div>
@@ -66,10 +105,15 @@ export default function RootLayout({
                     <div id="stars4"></div>
                 </div>
 
+                {/* Layout Components */}
                 <Sidebar />
                 <main>{children}</main>
                 <Footer />
+                
+                    <button id="back-to-top" className="back-to-top"><FaAngleDoubleUp /></button>
+               
 
+                {/* Mouse Trail SVG */}
                 <svg
                     className="svg-overlay"
                     xmlns="http://www.w3.org/2000/svg"
@@ -86,8 +130,6 @@ export default function RootLayout({
                             strokeWidth="10"
                             strokeOpacity={0.8}
                             strokeLinecap="round"
-                            onMouseEnter={() => handleHover(index)}
-                            onMouseLeave={() => handleMouseOut(index)}
                             className="svg-line"
                         />
                     ))}

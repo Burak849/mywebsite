@@ -9,7 +9,6 @@ import {
     FaAngleRight,
     FaEnvelope,
 } from "react-icons/fa";
-import { FaPhoneFlip } from "react-icons/fa6";
 import styled from 'styled-components';
 
 interface NavItem {

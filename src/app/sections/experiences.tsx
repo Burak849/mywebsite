@@ -5,7 +5,7 @@ import { relative } from 'path';
 const ExperienceSection = () => {
     return (
 
-        <section className={styles.sectioncont} id="about">
+        <section className={`${styles.sectioncont} fade-in`} id="about">
             <h1 style={{ cursor: 'default', position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>About <span style={{ color: '#FCD34D', marginLeft: 10 }}>Me</span></h1>
                     <br/>
         <div className={styles['spesifik']}>

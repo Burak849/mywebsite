@@ -59,12 +59,14 @@ const Counter: React.FC<{ title: string; endValue: number; duration: number }> =
     const counterRef = useCounterAnimation(endValue, duration);
 
     return (
+        <section className = "fade-in">
         <CounterWrapper>
             <div className="title">{title}</div>
             <div className="count" ref={counterRef}>
                 0
             </div>
         </CounterWrapper>
+        </section>
     );
 };
 

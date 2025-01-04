@@ -50,8 +50,15 @@ const AboutSection: React.FC = () => {
         return () => clearTimeout(timeout);
     }, [displayedText, isDeleting, texts, currentIndex, speed, deleteSpeed, delay]);
 
+    const scrollToFooter = () => {
+        const footerElement = document.getElementById("contact");
+        if (footerElement) {
+            footerElement.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
-        <section id="home">
+        <section className="fade-in" id="home">
         <div className={styles['about-container']}>
             <div className={styles['text-paragraf']}>
                 <div style={{ textShadow: 'none' }} className="group duration-500 -rotate-12 hover:-rotate-0 hover:skew-x-1 skew-x-0 hover:translate-x-6 hover:translate-y-10">
@@ -115,7 +122,7 @@ const AboutSection: React.FC = () => {
                     </div>
                 </StyledWrapper>
 
-                <button className={styles['custom-button']}>Contact Me</button>
+                    <button className={styles['custom-button']} onClick={scrollToFooter}>Contact Me</button>
             </div>
 
             <div className={styles.imgbg}>

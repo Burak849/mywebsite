@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const SkillSection = () => {
     return (<>
-        <section id="skills" style={{ position: 'relative', display: 'flex', gap: '5rem', flexDirection: 'column', height:'100vh', padding:'2rem' }}>
+        <section className="fade-in"  id="skills" style={{ position: 'relative', display: 'flex', gap: '5rem', flexDirection: 'column', height:'100vh', padding:'2rem' }}>
             <h1 style={{ position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>My<span style={{ color: '#FCD34D', marginLeft: 10 }}>Skills</span></h1>
             <div className={styles.maincont }>
 

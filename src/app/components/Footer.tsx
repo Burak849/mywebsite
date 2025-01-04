@@ -58,7 +58,7 @@ const Footer = () => {
     return (
 
 
-        <section id="contact" style={{
+        <section className="fade-in" id="contact" style={{
             display: 'flex',
             justifyContent: 'space-around', alignItems: 'center', height:'100vh'
         }}>
