@@ -71,9 +71,9 @@ const Counter: React.FC<{ title: string; endValue: number; duration: number }> =
 const CounterGroupWrapper = styled.section`
   display: flex;
   justify-content: center;
-  gap: 15rem;
+  gap: 10rem;
+  height:15vh;
   background: transparent;
-  padding: 1rem;
 `;
 
 const CounterGroup = () => {

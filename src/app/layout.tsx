@@ -66,7 +66,7 @@ export default function RootLayout({
                     <div id="stars4"></div>
                 </div>
 
-                <Navbar />
+               {/* <Navbar />*/}
                 <main>{children}</main>
                 <Footer />
 
