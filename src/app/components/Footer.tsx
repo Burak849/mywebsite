@@ -58,7 +58,7 @@ const Footer = () => {
     return (
 
 
-        <section style={{
+        <section id="contact" style={{
             display: 'flex',
             justifyContent: 'space-around', alignItems: 'center', height:'100vh'
         }}>

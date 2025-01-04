@@ -35,7 +35,7 @@ const ProjectSection = () => {
     ];
 
     return (
-        <section className={styles.skillsection}>
+        <section id="projects" className={styles.skillsection}>
             <article>
                 <div>
                     <h1 style={{ position: 'relative', textAlign: 'center', fontSize: '2rem', display: 'flex', justifyContent: 'center', color: 'white' }}>

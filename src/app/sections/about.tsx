@@ -51,7 +51,7 @@ const AboutSection: React.FC = () => {
     }, [displayedText, isDeleting, texts, currentIndex, speed, deleteSpeed, delay]);
 
     return (
-
+        <section id="home">
         <div className={styles['about-container']}>
             <div className={styles['text-paragraf']}>
                 <div style={{ textShadow: 'none' }} className="group duration-500 -rotate-12 hover:-rotate-0 hover:skew-x-1 skew-x-0 hover:translate-x-6 hover:translate-y-10">
@@ -123,7 +123,7 @@ const AboutSection: React.FC = () => {
             </div>
 
         </div>
-
+        </section>
     );
 }
 

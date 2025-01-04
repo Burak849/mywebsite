@@ -3,7 +3,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import { useEffect, useRef, useState } from "react";
 
@@ -66,7 +66,7 @@ export default function RootLayout({
                     <div id="stars4"></div>
                 </div>
 
-               {/* <Navbar />*/}
+                <Sidebar />
                 <main>{children}</main>
                 <Footer />
 

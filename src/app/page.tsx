@@ -1,7 +1,7 @@
 ﻿'use client';
 
 import { useEffect, useRef, useState } from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Sidebar";
 import AboutSection from "./sections/about";
 import ExperienceSection from "./sections/experiences";
 import ProjectSection from "./sections/projects";
@@ -13,11 +13,12 @@ import Counter from "./components/Counter";
 
 
 
-
 export default function Home() {
 
     return (
         <>
+            
+
             <AboutSection />
             <Counter/>
             <ExperienceSection />
