@@ -194,8 +194,8 @@ body {
 
 .fade-in {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+    transform: translateY(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
     .fade-in.show {
@@ -205,8 +205,8 @@ body {
 
     .fade-in.hide {
         opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+        transform: translateY(0);
+        transition: opacity 1s ease-out, transform 1s ease-out;
     }
 
 #back-to-top {

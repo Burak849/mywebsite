@@ -8,7 +8,6 @@ import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 import { FaAngleDoubleUp } from "react-icons/fa";
 
-
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -47,17 +46,17 @@ export default function RootLayout({
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        
+
                         entry.target.classList.add("show");
                         entry.target.classList.remove("hide");
                     } else {
-                        
+
                         entry.target.classList.add("hide");
                         entry.target.classList.remove("show");
                     }
                 });
             },
-            { threshold: 0.1 } 
+            { threshold: 0.1 }
         );
 
         sections.forEach((section) => {
@@ -72,12 +71,11 @@ export default function RootLayout({
     }, []);
 
 
-    window.onload = () => {
-        const backToTopButton = document.getElementById('back-to-top') as HTMLButtonElement;
+    useEffect(() => {
+        const backToTopButton = document.getElementById("back-to-top") as HTMLButtonElement;
 
         if (backToTopButton) {
-           
-            window.onscroll = function () {
+            const handleScroll = () => {
                 if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
                     backToTopButton.style.display = "block";
                 } else {
@@ -85,18 +83,24 @@ export default function RootLayout({
                 }
             };
 
-            
-            backToTopButton.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.addEventListener("scroll", handleScroll);
+
+            backToTopButton.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
             });
+
+            return () => {
+                window.removeEventListener("scroll", handleScroll);
+            };
         }
-    };
+    }, []);
 
 
 
     return (
         <html lang="en">
             <body>
+
                 {/* Background Animation */}
                 <div className="bg-animation">
                     <div id="stars"></div>
@@ -105,15 +109,15 @@ export default function RootLayout({
                     <div id="stars4"></div>
                 </div>
 
+
                 {/* Layout Components */}
                 <Sidebar />
                 <main>{children}</main>
                 <Footer />
-                
-                    <button id="back-to-top" className="back-to-top"><FaAngleDoubleUp /></button>
-               
 
-                {/* Mouse Trail SVG */}
+                <button id="back-to-top" className="back-to-top"><FaAngleDoubleUp /></button>
+
+
                 <svg
                     className="svg-overlay"
                     xmlns="http://www.w3.org/2000/svg"
