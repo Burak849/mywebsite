@@ -2,9 +2,10 @@
     display: flex;
     justify-content:center;
     align-items:center;
-    height:75vh;
+    height:auto;
     padding:2rem;
     gap: 1rem;
+    flex-wrap:wrap;
 }
 .cardbg {
     background: linear-gradient(135deg, rgba(248, 250, 252, .1), rgba(3, 7, 17, .9));
@@ -14,6 +15,9 @@
     border-radius: 12px;
     padding: 1.5rem;
     flex: 1;
+    min-width: 40rem; 
+    max-width: 50rem; 
+    box-sizing: border-box; 
 }
 
 .h3class {
@@ -82,3 +86,90 @@
         background-color: teal;
         border-radius: 0.5rem;
     }
+
+
+@media (max-width: 1024px) {
+    .sectioncont {
+        flex-direction: column;
+        height: auto;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .cardbg {
+        padding: 1.2rem;
+        min-width: 100%;
+    }
+
+    .h2class {
+        font-size: 1.4rem;
+    }
+
+    .h3class {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sectioncont {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .cardbg {
+        padding: 1rem;
+    }
+
+    .h2class {
+        font-size: 1.3rem;
+    }
+
+    .h3class {
+        font-size: 1rem;
+    }
+
+    .timeline::before {
+        left: 5px; 
+    }
+
+    .timelineItem {
+        padding-left: 1.5rem;
+    }
+
+        .timelineItem::before {
+            left: -5px; 
+        }
+}
+
+@media (max-width: 480px) {
+    .sectioncont {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .cardbg {
+        padding: 0.8rem;
+    }
+
+    .h2class {
+        font-size: 1.2rem;
+    }
+
+    .h3class {
+        font-size: 0.9rem;
+    }
+
+    .progressBar {
+        height: 0.8rem; 
+    }
+
+    .timelineItem {
+        padding-left: 1rem;
+    }
+
+        .timelineItem::before {
+            left: -7px;
+            width: 8px;
+            height: 8px; 
+        }
+}

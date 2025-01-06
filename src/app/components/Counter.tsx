@@ -11,6 +11,7 @@ const CounterWrapper = styled.div`
   color: white;
   display:flex;
   flex-direction: column-reverse;
+
   .title {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
@@ -20,6 +21,26 @@ const CounterWrapper = styled.div`
     font-size: 3rem;
     font-weight: bold;
     color: #fcd34d;
+  }
+
+  @media (max-width: 768px) {
+    .title {
+      font-size: 1.2rem;
+    }
+
+    .count {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1rem;
+    }
+
+    .count {
+      font-size: 1.5rem;
+    }
   }
 `;
 
@@ -76,6 +97,15 @@ const CounterGroupWrapper = styled.section`
   gap: 10rem;
   height:15vh;
   background: transparent;
+
+   @media (max-width: 1024px) {
+    gap: 5rem;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
 `;
 
 const CounterGroup = () => {
