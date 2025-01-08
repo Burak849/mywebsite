@@ -103,7 +103,7 @@ const CounterGroupWrapper = styled.section`
   }
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: row;
     gap: 2rem;
   }
 `;

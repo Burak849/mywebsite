@@ -120,9 +120,12 @@ const AboutSection: React.FC = () => {
 
                         </a>
                     </div>
-                </StyledWrapper>
-
+                    </StyledWrapper>
+                    <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', justifyContent: 'center', flexDirection: 'row', flexWrap: 'wrap' }}>
                     <button className={styles['custom-button']} onClick={scrollToFooter}>Contact Me</button>
+                    <button className={styles['custom-button']}>Resume</button>
+                    </div>
+
             </div>
 
             <div className={styles.imgbg}>

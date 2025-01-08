@@ -24,3 +24,12 @@
 
 }
 
+.myheader {
+    position: relative;
+    text-align: center; 
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    color: white;
+    
+}

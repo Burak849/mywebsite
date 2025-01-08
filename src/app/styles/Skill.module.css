@@ -13,6 +13,26 @@
         height: auto; 
         padding: 1.5rem; 
     }
+    .skillitem {
+        align-items: center;
+        padding: 0.75rem;
+        gap: 0.5rem;
+        border: none;
+    }
+    #skills {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    .webdevelopment, .design, .database {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.5rem;
+        padding: 3rem 1rem;
+    }
+
+    
 }
 
 
@@ -96,14 +116,6 @@
     background-color: #0a0a0a;
 }
 
-@media (max-width: 1024px) {
-    .skillitem {
-        align-items: center;
-        padding: 0.75rem;
-        gap: 0.5rem;
-        border: none;
-    }
-}
 
 .titles {
     position: absolute;
@@ -131,27 +143,7 @@
 }
 
 
-@media (max-width: 1024px) {
-    #skills {
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        gap: 2rem;
-    }
 
-    .webdevelopment, .design, .database {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.5rem;
-        padding: 3rem 1rem;
-    }
-
-    .skillitem {
-        width: 5rem;
-        padding: 0.5rem;
-        gap: 0.25rem;
-        font-size: 0.9rem;
-    }
-}
 
 @media (max-width: 768px) and (min-width:481px) {
     #skills {

@@ -10,6 +10,7 @@ const Footer = () => {
 
     const [formData, setFormData] = useState({
         name: "",
+        surname: "",
         email: "",
         message: "",
     });
@@ -35,7 +36,7 @@ const Footer = () => {
 
             if (response.ok) {
                 setStatus("success");
-                setFormData({ name: "", email: "", message: "" });
+                setFormData({ name: "", surname: "", email: "", message: "" });
             } else {
                 setStatus("error");
             }
@@ -44,6 +45,9 @@ const Footer = () => {
             setStatus("error");
         }
     };
+
+    
+
 
     const [isRocketLaunching, setIsRocketLaunching] = useState(false);
 
@@ -94,27 +98,27 @@ const Footer = () => {
                 <article>
                     <div className={styles.contactContainer}>
                         <div className={styles.contactform}>
-                            <h1 style={{ position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>Contact<span style={{ color: '#FCD34D', marginLeft: 10 }}>Me</span></h1>
-                            <form style={{ display: 'flex', width: '25rem', flexDirection: 'column' }}>
+                            <h1 className={styles.h1class} style={{ position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>Contact<span style={{ color: '#FCD34D', marginLeft: 10 }}>Me</span></h1>
+                            <form onSubmit={handleSubmit} style={{ display: 'flex', width: '25rem', flexDirection: 'column' }}>
 
                                 <div className="inputGroup">
-                                    <input type="text" id="name" required autoComplete="off" />
+                                    <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required autoComplete="off" />
                                     <label htmlFor="name">Name</label>
                                 </div>
                                 <div className="inputGroup">
-                                    <input type="text" id="Surname" required autoComplete="off" />
-                                    <label htmlFor="Surname">Surname</label>
+                                    <input type="text" id="surname" name="surname" value={formData.surname} onChange={handleChange} required autoComplete="off" />
+                                    <label htmlFor="surname">Surname</label>
                                 </div>
                                 <div className="inputGroup">
-                                    <input type="text" id="email" required autoComplete="off" />
+                                    <input type="text" id="email" name="email" value={formData.email} onChange={handleChange} required autoComplete="off" />
                                     <label htmlFor="email">Email</label>
                                 </div>
                                 <div className="inputGroup">
-                                    <textarea required id="message" autoComplete="off"></textarea>
+                                    <textarea required id="message" name="message" value={formData.message} onChange={handleChange} autoComplete="off"></textarea>
                                     <label htmlFor="message">Message</label>
                                 </div>
                             </form>
-                            <button type="submit" id="send" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }} className={stylenei['custom-button']} onClick={handleRocketLaunch}>
+                            <button type="submit" id="send" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }} className={styles['custom-button']} onClick={handleRocketLaunch}>
                                 <div className="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="1.5em" width="1.5em">
                                         <g style={{ filter: 'url(#shadow)' }}>
@@ -135,6 +139,9 @@ const Footer = () => {
 
                 </article>
             </StyledWrapper>
+
+           
+
 
         </section>
 

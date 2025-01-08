@@ -38,7 +38,7 @@ const ProjectSection = () => {
         <section id="projects" className={`${styles.skillsection} fade-in`}>
             <article>
                 <div>
-                    <h1 style={{ position: 'relative', textAlign: 'center', fontSize: '2rem', display: 'flex', justifyContent: 'center', color: 'white' }}>
+                    <h1 className={styles.myheader}>
                         My<span style={{ color: '#FCD34D', marginLeft: 10 }}>Projects</span>
                     </h1>
                 </div>
@@ -79,7 +79,24 @@ const StyledWrapper = styled.div`
     background: transparent;
     border: 1px solid teal;
     box-shadow: 0px 0px 10px teal;
+    flex-wrap:wrap;
   }
+
+  @media (max-width: 1024px) {
+    .cardItem {
+      flex: 1 1 calc(50% - 1rem);
+    }
+  }
+
+  @media (max-width:768px){
+      .card{
+      flex-direction:column;
+      }
+      .cardItem {
+      flex: 1 1 100%;
+    }
+  }
+
 
   .cardItem {
     flex: 1;

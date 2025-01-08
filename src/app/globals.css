@@ -22,19 +22,13 @@ body {
     color: var(--foreground);
     background: var(--background);
     font-family: Arial, Helvetica, sans-serif;
-    font-size:1rem;
+    font-size: 1rem;
     margin: 0;
     overflow-x: hidden;
 }
 
 
-.full-wh {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    width: 100%;
-}
+
 
 .bg-animation {
     position: fixed;
@@ -223,7 +217,7 @@ body {
     display: none;
     animation: bounce 0.6s infinite;
     border-radius: 5px;
-    z-index:500;
+    z-index: 500;
 }
 
 
@@ -249,4 +243,8 @@ body {
     }
 }
 
+*{
 
+scrollbar-color: cyan #212529;
+scrollbar-width: thin;
+}
