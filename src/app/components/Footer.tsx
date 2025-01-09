@@ -62,10 +62,7 @@ const Footer = () => {
     return (
 
 
-        <section className="fade-in" id="contact" style={{
-            display: 'flex',
-            justifyContent: 'space-around', alignItems: 'center', height:'100vh'
-        }}>
+        <section className={`${styles.sectionclass} fade-in`} id="contact">
 
             <StyledWrapper>
 
@@ -99,7 +96,7 @@ const Footer = () => {
                     <div className={styles.contactContainer}>
                         <div className={styles.contactform}>
                             <h1 className={styles.h1class} style={{ position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>Contact<span style={{ color: '#FCD34D', marginLeft: 10 }}>Me</span></h1>
-                            <form onSubmit={handleSubmit} style={{ display: 'flex', width: '25rem', flexDirection: 'column' }}>
+                            <form onSubmit={handleSubmit} className={styles.formclass}>
 
                                 <div className="inputGroup">
                                     <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required autoComplete="off" />

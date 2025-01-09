@@ -12,7 +12,7 @@ const ExperienceSection = () => {
 
 
                 <img src="../media/about-bg.gif" alt="About BG" className={styles['gif']} />
-                <p style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '2vh', cursor: 'default' }} >
+                <p className={styles.paragraphclass}>
                     My name is Burak Kurtulush, and I am a 25-year-old recently graduated Computer Engineer. My passion lies in coding, particularly in frontend development, but I am actively honing my skills in full-stack development. I hold dual citizenship, which grants me the privilege to live and work in both Europe and Turkey.
                     <br/>
                     <br/>

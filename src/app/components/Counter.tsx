@@ -80,13 +80,13 @@ const Counter: React.FC<{ title: string; endValue: number; duration: number }> =
     const counterRef = useCounterAnimation(endValue, duration);
 
     return (
-        <section className = "fade-in">
-        <CounterWrapper>
-            <div className="title">{title}</div>
-            <div className="count" ref={counterRef}>
-                0
-            </div>
-        </CounterWrapper>
+        <section className="fade-in">
+            <CounterWrapper>
+                <div className="title">{title}</div>
+                <div className="count" ref={counterRef}>
+                    0
+                </div>
+            </CounterWrapper>
         </section>
     );
 };
@@ -97,6 +97,16 @@ const CounterGroupWrapper = styled.section`
   gap: 10rem;
   height:15vh;
   background: transparent;
+
+  @media (max-width: 480px){
+      .section{
+        display: flex;
+        margin-top: 6rem;
+        flex-wrap: wrap;
+      }
+  }
+
+
 
    @media (max-width: 1024px) {
     gap: 5rem;

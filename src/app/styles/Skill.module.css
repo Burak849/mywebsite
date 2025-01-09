@@ -31,7 +31,12 @@
         gap: 0.5rem;
         padding: 3rem 1rem;
     }
-
+    .artcont {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: space-between;
+    }
     
 }
 
