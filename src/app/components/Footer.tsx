@@ -5,6 +5,7 @@ import styles from '../styles/Footer.module.css';
 import stylenei from '../styles/About.module.css';
 import styled from 'styled-components';
 import { useState } from "react";
+import emailjs from 'emailjs-com';
 
 const Footer = () => {
 
@@ -24,40 +25,35 @@ const Footer = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setStatus("loading");
+        setIsRocketLaunching(true); 
 
         try {
-            const response = await fetch("/api/contact", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
-            });
+            
+            const result = await emailjs.send(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,  // Email.js service ID
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, // Email.js template ID
+                formData,
+                process.env.NEXT_PUBLIC_EMAILJS_USER_ID!      // Email.js user ID
+            );
 
-            if (response.ok) {
-                setStatus("success");
-                setFormData({ name: "", surname: "", email: "", message: "" });
+            if (result.status === 200) {
+                setStatus('success');
+                setFormData({ name: '', surname: '', email: '', message: '' });
             } else {
-                setStatus("error");
+                setStatus('error');
             }
         } catch (error) {
-            console.error("Error submitting form:", error);
-            setStatus("error");
+            console.error('Error submitting form:', error);
+            setStatus('error');
+        } finally {
+            setTimeout(() => {
+                setIsRocketLaunching(false);
+            }, 3000);
         }
     };
 
     
-
-
     const [isRocketLaunching, setIsRocketLaunching] = useState(false);
-
-    const handleRocketLaunch = () => {
-        setIsRocketLaunching(true);
-
-        setTimeout(() => {
-            setIsRocketLaunching(false);
-        }, 3000);
-    };
 
     return (
 
@@ -96,7 +92,7 @@ const Footer = () => {
                     <div className={styles.contactContainer}>
                         <div className={styles.contactform}>
                             <h1 className={styles.h1class} style={{ position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>Contact<span style={{ color: '#FCD34D', marginLeft: 10 }}>Me</span></h1>
-                            <form onSubmit={handleSubmit} className={styles.formclass}>
+                            <form /*onSubmit={handleSubmit}*/ className={styles.formclass}>
 
                                 <div className="inputGroup">
                                     <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required autoComplete="off" />
@@ -115,7 +111,7 @@ const Footer = () => {
                                     <label htmlFor="message">Message</label>
                                 </div>
                             </form>
-                            <button type="submit" id="send" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }} className={styles['custom-button']} onClick={handleRocketLaunch}>
+                            <button type="submit" id="send" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }} className={styles['custom-button']} onClick={handleSubmit}  /*onClick={handleRocketLaunch}*/ >
                                 <div className="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="1.5em" width="1.5em">
                                         <g style={{ filter: 'url(#shadow)' }}>

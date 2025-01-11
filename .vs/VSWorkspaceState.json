@@ -1,8 +1,6 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
-    "\\public\\media",
     "\\src",
     "\\src\\app",
     "\\src\\app\\api",
@@ -11,6 +9,6 @@
     "\\src\\app\\styles",
     "\\src\\services"
   ],
-  "SelectedNode": "\\public\\media\\burak_kurtulus_cv_eng.pdf",
+  "SelectedNode": "\\src\\app\\components\\Footer.tsx",
   "PreviewInSolutionExplorer": false
 }
