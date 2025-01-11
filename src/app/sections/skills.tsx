@@ -6,7 +6,7 @@ const SkillSection = () => {
     return (
         <>
             <section className={`${styles.sectSide} fade-in`} id="skills">
-            <h1 className={styles.h1} style={{ position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>My<span style={{ color: '#FCD34D', marginLeft: 10 }}>Skills</span></h1>
+            <h1 className={styles.h1}>My<span style={{ color: '#FCD34D', marginLeft: 10 }}>Skills</span></h1>
             <div className={styles.maincont}>
 
                 <article className={styles.webdevelopment}>

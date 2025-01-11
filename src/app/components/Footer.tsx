@@ -307,6 +307,16 @@ const StyledWrapper = styled.div`
     animation: fumes 20s infinite;
   }
 
+  @media (max-width:468px){
+    .rocket .exhaust-fumes li:nth-child(9) {
+    width: 40px;
+    height: 40px;
+    left: 160px;
+    top: 380px;
+    animation: fumes 20s infinite;
+  }
+  }
+
 
   @keyframes fumes {
     50% {

@@ -39,9 +39,31 @@
         height: 100%;
         background: url('../../../public/media/banner1.jpg') no-repeat center center;
         background-size: cover;
-        filter: blur(12px); 
-        opacity: 0.5; 
-        z-index: -1; 
+        filter: blur(12px);
+        opacity: 0.5;
+        z-index: -1;
         clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-
     }
+
+
+@media (max-width:468px) {
+    .sectioncont {
+        margin-top: 0;
+        margin-bottom: 0;
+        clip-path: none;
+    }
+
+        .sectioncont::before {
+            clip-path: none;
+        }
+        .spesifik{
+            flex-direction:column;
+        }
+        .gif{
+            width:25rem;
+            height:auto;
+        }
+        .h1{
+            font-size:4vh;
+        }
+}
