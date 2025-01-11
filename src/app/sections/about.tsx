@@ -59,7 +59,7 @@ const AboutSection: React.FC = () => {
 
     const handleDownload = () => {
         const fileUrl = '../media/burak_kurtulus_cv_eng.pdf'; 
-        const fileName = 'Resume.pdf'; 
+        const fileName = 'Burak_Kurtulush_Resume.pdf'; 
         const link = document.createElement('a');
         link.href = fileUrl;
         link.download = fileName;
