@@ -81,11 +81,11 @@ const AboutSection: React.FC = () => {
                     </div>
                     <div>
                         <h2 style={{ fontSize: "5vh", color: 'white', textShadow: 'none' }}>Hello!</h2>
-                        <p style={{ color: '#FCD34D', textShadow: 'none', fontSize: "5vh" }}>
+                        <p className={styles.pclass}>
                             {displayedText}
                             <span>|</span>
                         </p>
-                        <h3 style={{ color: 'white', textShadow: 'none', fontSize: "3vh" }}>I am a passionate computer engineer with a focus on UI/UX and Front-end development, dedicated to crafting innovative and user-centric websites.</h3>
+                        <h3 className={styles.h3class}>I am a passionate computer engineer with a focus on UI/UX and Front-end development, dedicated to crafting innovative and user-centric websites.</h3>
                     </div>
                     <StyledWrapper>
 

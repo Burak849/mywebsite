@@ -30,7 +30,7 @@ const Footer = () => {
         try {
             
             const result = await emailjs.send(
-                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,  // Email.js service ID
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,  // Email.js service ID api keys in .env.local
                 process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, // Email.js template ID
                 formData,
                 process.env.NEXT_PUBLIC_EMAILJS_USER_ID!      // Email.js user ID

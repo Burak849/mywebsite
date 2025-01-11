@@ -236,8 +236,8 @@
 
 
 .custom-button {
-    background-color: #1a1a2e; 
-    color: #e94560; 
+    background-color: #171739;
+    color: #e94560;
     border: none;
     padding: 15px 30px;
     font-size: 18px;
@@ -315,15 +315,26 @@
     left: 100%;
     transition: all 0.5s ease;
 }
-
-
+.pclass {
+    color: #FCD34D; 
+    text-shadow: none; 
+    font-size: 5vh;
+}
+.h3class {
+    color: white; 
+    text-shadow: none; 
+    font-size: 3vh;
+}
 @media (max-width: 468px) {
     .imgbg {
         width: 25rem;
         height: 25rem;
         padding: 1rem;
+        margin-top: 2rem;
     }
-
+    .pclass{
+        font-size:3vh;
+    }
     .about-container {
         height: auto;
         gap: 5rem;
@@ -333,5 +344,8 @@
     .text-paragraf {
         padding: 2rem;
         align-items: center;
+    }
+    .h3class {
+        font-size:2.5vh;
     }
 }
