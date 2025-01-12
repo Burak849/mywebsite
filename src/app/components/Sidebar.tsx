@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 
 import {
     FaHome,
@@ -23,12 +23,21 @@ const Sidebar: React.FC = () => {
     const [hideTimeout, setHideTimeout] = useState<NodeJS.Timeout | null>(null);
     const [debounceTimeout, setDebounceTimeout] = useState<NodeJS.Timeout | null>(null);
 
-    const resetHideTimeout = () => {
+    const navItems: NavItem[] = useMemo(() => [
+        { id: "home", label: "Home", icon: <FaHome /> },
+        { id: "about", label: "About", icon: <FaInfoCircle /> },
+        { id: "education", label: "Education", icon: <FaBook /> },
+        { id: "skills", label: "Skills", icon: <FaLaptopCode /> },
+        { id: "projects", label: "Projects", icon: <FaProjectDiagram /> },
+        { id: "contact", label: "Contacts", icon: <FaEnvelope /> },
+    ], []);  
+
+    const resetHideTimeout = useCallback(() => {
         if (hideTimeout) clearTimeout(hideTimeout);
         setHideTimeout(setTimeout(() => setIsVisible(false), 5000));
-    };
+    }, [hideTimeout]);
 
-    const handleScroll = () => {
+    const handleScroll = useCallback(() => {
         setIsVisible(true);
         resetHideTimeout();
         const sections = document.querySelectorAll<HTMLElement>("section");
@@ -54,7 +63,7 @@ const Sidebar: React.FC = () => {
                 );
             }
         });
-    };
+    }, [debounceTimeout, resetHideTimeout, navItems]);  // navItems burada eklendi
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
@@ -63,7 +72,7 @@ const Sidebar: React.FC = () => {
             if (hideTimeout) clearTimeout(hideTimeout);
             if (debounceTimeout) clearTimeout(debounceTimeout);
         };
-    }, [hideTimeout, debounceTimeout]);
+    }, [hideTimeout, debounceTimeout, handleScroll]);
 
     const handleClick = (id: string) => {
         const element = document.getElementById(id);
@@ -75,15 +84,6 @@ const Sidebar: React.FC = () => {
         setIsVisible(!isVisible);
         resetHideTimeout();
     };
-
-    const navItems: NavItem[] = [
-        { id: "home", label: "Home", icon: <FaHome /> },
-        { id: "about", label: "About", icon: <FaInfoCircle /> },
-        { id: "education", label: "Education", icon: <FaBook /> },
-        { id: "skills", label: "Skills", icon: <FaLaptopCode /> },
-        { id: "projects", label: "Projects", icon: <FaProjectDiagram /> },
-        { id: "contact", label: "Contacts", icon: <FaEnvelope /> },
-    ];
 
     return (
         <StyledWrapper>
@@ -105,7 +105,8 @@ const Sidebar: React.FC = () => {
             </div>
         </StyledWrapper>
     );
-}
+};
+
 const StyledWrapper = styled.div`
 .sidebar {
     position: fixed;

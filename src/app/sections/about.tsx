@@ -1,17 +1,17 @@
 ﻿'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import styles from '../styles/About.module.css';
 import styled from 'styled-components';
 
 
 const AboutSection: React.FC = () => {
 
-    const texts = [
+    const texts = useMemo(() => [
         "I am a Computer Engineer from Turkey.",
         "I love to code for Frontend Development.",
         "Let's build something aesthetic!"
-    ];
+    ], []);
     const [displayedText, setDisplayedText] = useState("");
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
@@ -48,7 +48,7 @@ const AboutSection: React.FC = () => {
         }
 
         return () => clearTimeout(timeout);
-    }, [displayedText, isDeleting, texts, currentIndex, speed, deleteSpeed, delay]);
+    }, [displayedText, isDeleting, currentIndex, speed, deleteSpeed, delay, texts]);
 
     const handleDownload = () => {
         const fileUrl = '../media/burak_kurtulus_cv_eng.pdf'; 
