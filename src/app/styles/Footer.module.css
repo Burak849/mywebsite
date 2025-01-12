@@ -193,9 +193,17 @@
     }
 }
 
+@media (max-width: 1024px) and (min-width:769px) {
+    .contactContainer {
+        padding: 2.5rem;
+        align-items: center;
+    }
+}
+
+
 @media (max-width: 768px) and (min-width:481px) {
     .contactContainer {
-        padding: 3rem;
+        padding: 1.5rem;
         flex-direction: column;
         align-items: center;
     }

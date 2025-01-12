@@ -327,13 +327,12 @@
 }
 @media (max-width: 468px) {
     .imgbg {
-        width: 25rem;
-        height: 25rem;
-        padding: 1rem;
+        width: 20rem;
+        height: 20rem;
         margin-top: 2rem;
     }
     .pclass{
-        font-size:3vh;
+        font-size:2vh;
     }
     .about-container {
         height: auto;
@@ -346,6 +345,25 @@
         align-items: center;
     }
     .h3class {
-        font-size:2.5vh;
+        font-size:1.5vh;
+    }
+}
+@media (max-width: 1024px) and (min-width: 768px){
+    .pclass{
+        font-size: 3vh;
+    }
+    .h3class{
+        font-size: 2.5vh;
+    }
+    .imgbg{
+        height: 30rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1440px) and (min-width: 1025px){
+    .pclass{
+        gap:2rem;
+        padding: 2rem;
     }
 }

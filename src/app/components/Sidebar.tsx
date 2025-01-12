@@ -239,6 +239,15 @@ const StyledWrapper = styled.div`
             display: none;
         }
 }
+        @media (max-width:1025px){
+        .sidebar{
+        width:3rem;
+        }
+        .sidebar li a {
+        font-size:1.5em;
+        }
+
+        }
 
 
 
