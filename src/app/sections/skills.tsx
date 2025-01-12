@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from '../styles/Skill.module.css';
-import styled from 'styled-components';
 
 const SkillSection = () => {
     return (

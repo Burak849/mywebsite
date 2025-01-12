@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/Experience.module.css';
-import { relative } from 'path';
+
 
 const ExperienceSection = () => {
     return (

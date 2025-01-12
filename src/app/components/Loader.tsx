@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import React from "react";
 import styled from "styled-components";
 
 const Loader = () => {

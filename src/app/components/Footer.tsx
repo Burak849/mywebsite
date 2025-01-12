@@ -2,7 +2,6 @@
 
 import React from 'react';
 import styles from '../styles/Footer.module.css';
-import stylenei from '../styles/About.module.css';
 import styled from 'styled-components';
 import { useState } from "react";
 import emailjs from 'emailjs-com';
@@ -127,6 +126,16 @@ const Footer = () => {
                                 </div>
                                 Send Message
                             </button>
+                            
+                            {status === "success" && (
+                                <div className={styles.successMessage}>Successfully sent!</div>
+                            )}
+                            {status === "error" && (
+                                <div className={styles.errorMessage}>There was an error sending the message. Please try again.</div>
+                            )}
+                            {status === "loading" && (
+                                <div className={styles.loadingMessage}>Sending...</div>
+                            )}
                         </div>
                     </div>
 

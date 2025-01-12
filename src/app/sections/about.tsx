@@ -50,13 +50,6 @@ const AboutSection: React.FC = () => {
         return () => clearTimeout(timeout);
     }, [displayedText, isDeleting, texts, currentIndex, speed, deleteSpeed, delay]);
 
-    const scrollToFooter = () => {
-        const footerElement = document.getElementById("contact");
-        if (footerElement) {
-            footerElement.scrollIntoView({ behavior: "smooth" });
-        }
-    };
-
     const handleDownload = () => {
         const fileUrl = '../media/burak_kurtulus_cv_eng.pdf'; 
         const fileName = 'Burak_Kurtulush_Resume.pdf'; 
