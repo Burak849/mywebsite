@@ -37,4 +37,8 @@
     .animbg{
         padding:1rem;
     }
+    .skillsection{
+        padding: 1rem;
+        gap:1rem;
+    }
 }

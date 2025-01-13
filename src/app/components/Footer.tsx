@@ -21,8 +21,23 @@ const Footer = () => {
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
+    const isEmailValid = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  
+  
+  
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        if (!formData.name || !formData.surname || !formData.email || !formData.message) {
+          alert("Please fill in all the fields before submitting.");
+          return;
+      }
+
+        if (!isEmailValid(formData.email)) {
+          alert("Please enter a valid email address.");
+          return;
+      }
         setStatus("loading");
         setIsRocketLaunching(true); 
 
@@ -51,7 +66,7 @@ const Footer = () => {
         }
     };
 
-    
+    const isFormValid = formData.name && formData.surname && formData.email && formData.message;
     const [isRocketLaunching, setIsRocketLaunching] = useState(false);
 
     return (
@@ -61,7 +76,7 @@ const Footer = () => {
 
             <StyledWrapper>
 
-                <article style={{ marginBottom:'8rem' }}>
+                <article className='articleclass' style={{ marginBottom:'8rem' }}>
                     <div className={`rocket ${isRocketLaunching ? 'launching' : ''}`}>
                         <div className="rocket-body">
                             <div className="body" />
@@ -91,7 +106,7 @@ const Footer = () => {
                     <div className={styles.contactContainer}>
                         <div className={styles.contactform}>
                             <h1 className={styles.h1class} style={{ position: 'relative', textAlign: 'center', fontSize: '5vh', display: 'flex', justifyContent: 'center', color: 'white' }}>Contact<span style={{ color: '#FCD34D', marginLeft: 10 }}>Me</span></h1>
-                            <form /*onSubmit={handleSubmit}*/ className={styles.formclass}>
+                            <form className={styles.formclass}>
 
                                 <div className="inputGroup">
                                     <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required autoComplete="off" />
@@ -110,7 +125,7 @@ const Footer = () => {
                                     <label htmlFor="message">Message</label>
                                 </div>
                             </form>
-                            <button type="submit" id="send" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }} className={styles['custom-button']} onClick={handleSubmit}  /*onClick={handleRocketLaunch}*/ >
+                            <button type="submit" id="send" style={{ display: 'flex', gap: '1rem', alignItems: 'center', cursor: (!isFormValid || status === "loading") ? 'not-allowed' : 'pointer' }} className={styles['custom-button']} onClick={handleSubmit}  disabled={!isFormValid || status === "loading"} >
                                 <div className="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="1.5em" width="1.5em">
                                         <g style={{ filter: 'url(#shadow)' }}>
@@ -154,16 +169,18 @@ const Footer = () => {
 
 
 const StyledWrapper = styled.div`
+.articleclass{
+}
  .rocket {
     position: relative;
     width: 80px;
     left: calc(50% - 40px);
-    transition: transform 2.5s linear; 
+    transition: transform 10s linear; 
   }
 
   .rocket.launching {
       transform:rotate(5deg);
-        transform: translateY(-300rem); 
+        transform: translateY(-3000rem); 
     }
 
   .rocket .rocket-body {
@@ -309,9 +326,9 @@ const StyledWrapper = styled.div`
   }
 
   .rocket .exhaust-fumes li:nth-child(9) {
-    width: 90px;
-    height: 90px;
-    left: 200px;
+    width: 100px;
+    height: 100px;
+    left: 140px;
     top: 380px;
     animation: fumes 20s infinite;
   }
@@ -426,6 +443,11 @@ const StyledWrapper = styled.div`
   border-color: rgb(150, 150, 200);
   
 }
+  @media (max-width:468px){
+    .articleclass{
+    display:none;
+}
+  }
 `;
 
 export default Footer;

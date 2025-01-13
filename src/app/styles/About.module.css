@@ -336,12 +336,12 @@
     }
     .about-container {
         height: auto;
-        gap: 5rem;
+        gap: 3rem;
         flex-direction: column-reverse;
     }
 
     .text-paragraf {
-        padding: 2rem;
+        padding: 0;
         align-items: center;
     }
     .h3class {

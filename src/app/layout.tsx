@@ -12,12 +12,12 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     const trailLength = 10;
-    const [positions, setPositions] = useState<{ x: number; y: number }[]>(
-        Array(trailLength).fill({ x: 0, y: 0 })
-    );
+    const [positions, setPositions] = useState<{ x: number; y: number }[]>( Array(trailLength).fill({ x: 0, y: 0 }));
+    const [trailVisible, setTrailVisible] = useState(true);
 
     useEffect(() => {
         let animationFrame: number;
+        let timeout: NodeJS.Timeout;
 
         const handleMouseMove = (event: MouseEvent) => {
             const { clientX: x, clientY: y } = event;
@@ -27,6 +27,13 @@ export default function RootLayout({
                     ...prevPositions.slice(0, trailLength - 1),
                 ]);
             });
+            
+                setTrailVisible(true);       
+                clearTimeout(timeout);
+                timeout = setTimeout(() => {
+                    setTrailVisible(false);
+                }, 1000);  
+
         };
 
         document.addEventListener("mousemove", handleMouseMove);
@@ -130,7 +137,7 @@ export default function RootLayout({
                             y2={pos.y}
                             stroke="#FCD34D"
                             strokeWidth="10"
-                            strokeOpacity={0.8}
+                            strokeOpacity={trailVisible ? 0.8 : 0}
                             strokeLinecap="round"
                             className="svg-line"
                         />

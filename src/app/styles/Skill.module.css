@@ -179,7 +179,9 @@
     .myheader {
         font-size: 2.5vh;
     }
-
+    .maincont{
+        flex-direction: column;
+    }
     #skills {
         padding: 1rem;
     }
@@ -190,12 +192,12 @@
         padding: 0.5rem;
     }
     .artcont{
+        flex-direction: row;
         gap:0;
     }
     .webdevelopment {
         display: flex;
         padding: 1rem;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;

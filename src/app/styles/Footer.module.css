@@ -163,7 +163,9 @@
         width: 100%;
     }
     .sectionclass {
-     gap:15rem;
+        height: 80vh;
+        align-items: flex-start;
+        justify-content: center;
     }
     .formclass {
         display: flex;
@@ -193,7 +195,13 @@
     }
 }
 
-@media (max-width: 1024px) and (min-width:769px) {
+@media (max-width: 1024px) and (min-width:768px) {
+    .sectionclass{
+    gap: 16rem;
+    height: 100vh;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    }
     .contactContainer {
         padding: 2.5rem;
         align-items: center;
@@ -207,6 +215,12 @@
         flex-direction: column;
         align-items: center;
     }
+    .sectionclass{
+        gap: 16rem;
+        height: 100vh;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        }
 
     .contactform {
         width: 80%;

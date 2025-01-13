@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import styles from '../styles/About.module.css';
 import styled from 'styled-components';
-
+import Image from 'next/image';
 
 const AboutSection: React.FC = () => {
 
@@ -138,7 +138,7 @@ const AboutSection: React.FC = () => {
                 </div>
 
                 <div className={styles.imgbg}>
-                    <img src="../media/pp-removebg1.png" alt="Profile Image" className={styles['profile-image']} />
+                <Image src="/media/pp-removebg1.png" alt="Profile Image" className={styles['profile-image']} width={439}  height={718} />
                 </div>
 
             </div>
@@ -159,7 +159,11 @@ const StyledWrapper = styled.div`
     height: 70px;
     width: 350px;
   }
-
+@media (max-width:468px){
+.card{
+    width:19rem;
+}
+}
   .card svg {
     position: absolute;
     display: flex;

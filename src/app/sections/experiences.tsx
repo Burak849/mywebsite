@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../styles/Experience.module.css';
+import Image from 'next/image';
 
 
 const ExperienceSection = () => {
@@ -10,8 +11,8 @@ const ExperienceSection = () => {
                     <br/>
         <div className={styles['spesifik']}>
 
+                 <Image src="/media/about-bg.gif" alt="About BG" className={styles['gif']} width={233}  height={136} unoptimized/>
 
-                <img src="../media/about-bg.gif" alt="About BG" className={styles['gif']} />
                 <p className={styles.paragraphclass}>
                     My name is Burak Kurtulush, and I am a 25-year-old recently graduated Computer Engineer. My passion lies in coding, particularly in frontend development, but I am actively honing my skills in full-stack development. I hold dual citizenship, which grants me the privilege to live and work in both Europe and Turkey.
                     <br/>
