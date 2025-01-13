@@ -9,7 +9,8 @@ export default {
   theme: {
     extend: {
           colors: {
-
+            '--orange': '#FF5733', 
+            'custom-baslik': '#000000',
       },
     },
   },
