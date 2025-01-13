@@ -21,7 +21,7 @@ const Sidebar: React.FC = () => {
     const [activeSection, setActiveSection] = useState<string>("home");
     const [isVisible, setIsVisible] = useState<boolean>(false);
     const [hideTimeout, setHideTimeout] = useState<NodeJS.Timeout | null>(null);
-    const [debounceTimeout, setDebounceTimeout] = useState<NodeJS.Timeout | null>(null);
+    
 
     const navItems: NavItem[] = useMemo(() => [
         { id: "home", label: "Home", icon: <FaHome /> },
@@ -54,25 +54,21 @@ const Sidebar: React.FC = () => {
 
                 setActiveSection(sectionId);
 
-                if (debounceTimeout) clearTimeout(debounceTimeout);
-                setDebounceTimeout(
-                    setTimeout(() => {
-                        document.title = "Burak Kurtulush | " + sectionLabel;
-                        window.history.pushState(null, "", `#${sectionId}`);
-                    }, 500)
-                );
+                if (sectionLabel) {
+                    document.title = "Burak Kurtulush | " + sectionLabel;
+                }
             }
         });
-    }, [debounceTimeout, resetHideTimeout, navItems]);  // navItems burada eklendi
+    }, [resetHideTimeout, navItems]); 
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => {
             window.removeEventListener("scroll", handleScroll);
             if (hideTimeout) clearTimeout(hideTimeout);
-            if (debounceTimeout) clearTimeout(debounceTimeout);
+            
         };
-    }, [hideTimeout, debounceTimeout, handleScroll]);
+    }, [hideTimeout, handleScroll]);
 
     const handleClick = (id: string) => {
         const element = document.getElementById(id);
