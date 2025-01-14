@@ -8,9 +8,9 @@ import Image from 'next/image';
 const AboutSection: React.FC = () => {
 
     const texts = useMemo(() => [
-        "I am a Computer Engineer from Turkey.",
+        "I am a Software Developer from Turkey.",
         "I love to code for Frontend Development.",
-        "Let's build something aesthetic!"
+        "Let's build something Elegance!"
     ], []);
     const [displayedText, setDisplayedText] = useState("");
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -51,7 +51,7 @@ const AboutSection: React.FC = () => {
     }, [displayedText, isDeleting, currentIndex, speed, deleteSpeed, delay, texts]);
 
     const handleDownload = () => {
-        const fileUrl = '../media/burak_kurtulus_cv_eng.pdf'; 
+        const fileUrl = '../media/Burak-Kurtulush-CV.pdf'; 
         const fileName = 'Burak_Kurtulush_Resume.pdf'; 
         const link = document.createElement('a');
         link.href = fileUrl;
@@ -78,7 +78,7 @@ const AboutSection: React.FC = () => {
                             {displayedText}
                             <span>|</span>
                         </p>
-                        <h3 className={styles.h3class}>I am a passionate computer engineer with a focus on UI/UX and Front-end development, dedicated to crafting innovative and user-centric websites.</h3>
+                        <h3 className={styles.h3class}>I am a passionate Software Developer with a focus on UI/UX and Front-end development, dedicated to crafting innovative and user-centric websites.</h3>
                     </div>
                     <StyledWrapper>
 

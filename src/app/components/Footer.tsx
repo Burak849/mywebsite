@@ -125,7 +125,7 @@ const Footer = () => {
                                     <label htmlFor="message">Message</label>
                                 </div>
                             </form>
-                            <button type="submit" id="send" style={{ display: 'flex', gap: '1rem', alignItems: 'center', cursor: (!isFormValid || status === "loading") ? 'not-allowed' : 'pointer' }} className={styles['custom-button']} onClick={handleSubmit}  disabled={!isFormValid || status === "loading"} >
+                            <button type="submit" id="send" style={{ display: 'flex', gap: '1rem', alignItems: 'center', cursor: !isFormValid || status === "loading" ? (status === "loading" ? 'wait' : 'not-allowed') : 'pointer' }} className={styles['custom-button']} onClick={handleSubmit}  disabled={!isFormValid || status === "loading"} >
                                 <div className="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="1.5em" width="1.5em">
                                         <g style={{ filter: 'url(#shadow)' }}>
