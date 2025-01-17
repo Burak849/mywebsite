@@ -116,7 +116,7 @@
 }
 
 .skillitem {
-    cursor: pointer;
+    cursor: default;
     display: flex;
     flex-direction: column;
     width: 6rem;
@@ -127,6 +127,7 @@
     border-width: 0.25rem;
     text-align: center;
     background-color: #0a0a0a;
+
 }
 
 

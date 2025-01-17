@@ -229,6 +229,20 @@ body {
     border-radius: 5px;
     z-index: 500;
 }
+@media (max-width:768px) and (min-width:340px){
+    #back-to-top{
+        bottom:1rem;
+        right:1rem;
+        font-size:1.5rem;
+    }
+}
+@media (max-width:339px){
+    #back-to-top {
+        bottom: 0.5rem;
+        right: 0.5rem;
+        font-size: 1rem;
+    }
+}
 
 
 @keyframes bounce {
