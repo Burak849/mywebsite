@@ -142,10 +142,10 @@ const CounterGroupWrapper = styled.section`
 const CounterGroup = () => {
     return (
         <CounterGroupWrapper>
-            <Counter title="Completed Projects" endValue={10} duration={7} />
-            <Counter title="Tools Learned" endValue={20} duration={7} />
-            <Counter title="Coded Lines" endValue={30000} duration={5} />
-            <Counter title="Satisfied Clients" endValue={10} duration={7} />
+            <Counter title="Projects Completed" endValue={10} duration={4} />
+            <Counter title="Courses" endValue={10} duration={4} />
+            <Counter title="Contributions" endValue={250} duration={3} />
+            <Counter title="Satisfied Clients" endValue={10} duration={4} />
         </CounterGroupWrapper>
     );
 };

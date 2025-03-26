@@ -78,7 +78,7 @@ const AboutSection: React.FC = () => {
                             {displayedText}
                             <span>|</span>
                         </p>
-                        <h3 className={styles.h3class}>I am a passionate Software Developer with a focus on UI/UX and Front-end development, dedicated to crafting innovative and user-centric websites.</h3>
+                        <h3 className={styles.h3class}>I am a passionate Software Developer with a focus on Full-stack development, dedicated to crafting innovative and user-centric websites.</h3>
                     </div>
                     <StyledWrapper>
 

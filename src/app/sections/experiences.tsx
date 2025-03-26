@@ -14,7 +14,7 @@ const ExperienceSection = () => {
                  <Image src="/media/about-bg.gif" alt="About BG" className={styles['gif']} width={233}  height={136} unoptimized/>
 
                 <div className={styles.paragraphclass}>
-                    <p>My name is Burak Kurtulush. I am a 24 years-old recently graduated Software Engineer. My passion lies in coding, particularly in frontend development, but I am actively honing my skills in full-stack development. I am a dual citizenship holder, which grants me the privilege to reside and work in both Europe and Turkey.</p>
+                    <p>My name is Burak Kurtulush. I am a 25 years-old recently graduated Software Engineer. My passion lies in coding, particularly in frontend development, but I am actively honing my skills in full-stack development. I am a dual citizenship holder, which grants me the privilege to reside and work in both Europe and Turkey.</p>
                     <br/>
                     <p>I have spent several months in various countries (USA, Germany, Ireland ..), allowing me to immerse myself in diverse cultures and stressful situations. This unique exposure has not only broadened my worldview but also inspired my curiosity to explore even more.</p>
                     <br/>
