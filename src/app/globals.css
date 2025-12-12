@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
     --background: #ffffff;
@@ -12,6 +10,8 @@
         --background: #000000; /*#1C8394 #154B52 #212121 #000B0D #390D02 #A52502*/
         --foreground: #ededed;
         scroll-behavior: smooth;
+        --orange: '#FF5733'; 
+        --custom-baslik: '#000000';
     }
 }
 

@@ -4,7 +4,7 @@ import React from 'react';
 import styles from '../styles/Footer.module.css';
 import styled from 'styled-components';
 import { useState } from "react";
-import emailjs from 'emailjs-com';
+import emailjs from "@emailjs/browser";
 
 const Footer = () => {
 
