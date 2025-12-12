@@ -14,7 +14,7 @@ import styled from 'styled-components';
 interface NavItem {
     id: string;
     label: string;
-    icon: JSX.Element;
+    icon: React.ReactNode;
 }
 
 const Sidebar: React.FC = () => {
